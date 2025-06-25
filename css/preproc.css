@@ -28,7 +28,7 @@ main {
 }
 main section {
   padding-bottom: 70px;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 main div {
   max-width: 1050px;
@@ -58,11 +58,4 @@ main img {
   width: 100%;
   display: block;
   border-radius: 50%;
-}
-
-.work-sans-uniquifier900 {
-  font-family: "Work Sans", sans-serif;
-  /* font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: italic; */
 }/*# sourceMappingURL=preproc.css.map */
