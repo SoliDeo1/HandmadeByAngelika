@@ -4,18 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/preproc.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-    <link rel="stylesheet" href="owl-carousel/owl.theme.css">
-
-    <link rel="stylesheet" href="css/preproc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
     <title>Handmade by Angelika</title>
 </head>
 
@@ -28,13 +25,16 @@
                 </div>
                 <ul>
                     <li>
-                        <a href="">My works</a>
+                        <a href="index.html">Main</a>
                     </li>
                     <li>
-                        <a href="">Feedbacks</a>
+                        <a href="my_works.html">My works</a>
                     </li>
                     <li>
-                        <a href="">Contacts</a>
+                        <a href="collection.html">Collection</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Contacts</a>
                     </li>
                 </ul>
             </div>
@@ -49,7 +49,7 @@
                         and till now I'm so exited of making people happy.</p>
                 </article>
                 <div class="main-logo">
-                    <img src="images/main-logo.jpeg" alt="main-logo">
+                    <img class="main-screen-logo" src="images/main-logo.jpeg" alt="main-logo">
                 </div>
             </div>
         </section>
@@ -57,16 +57,30 @@
 
 
         <section class="works-carussel">
-            <div class="owl-carousel owl-theme">
-                <div> <img src="images/IMG_9465.JPG" alt=""> </div>
-                <div> <img src="images/IMG_9466.JPG" alt=""> </div>
-                <div> <img src="images/IMG_9468.jpg" alt=""> </div>
-                <div> <img src="images/IMG_9469.jpg" alt=""> </div>
-                <div> <img src="images/" alt=""> </div>
-                <div> <img src="images/" alt=""> </div>
-                <div> <img src="images/" alt=""> </div>
-                ...
+            <div class="owl-carousel">
+                <div>
+                    <img src="images/IMG_9486.jpg" alt="1">
+                </div>
+                <div>
+                    <img src="images/IMG_9483.jpg" alt="2">
+                </div>
+                <div>
+                    <img src="images/IMG_9473.jpg" alt="3">
+                </div>
+                <div>
+                    <img src="images/IMG_9469.jpg" alt="4">
+                </div>
+                <div>
+                    <img src="images/IMG_9470.jpg" alt="5">
+                </div>
+                <div>
+                    <img src="images/IMG_9484.jpg" alt="6">
+                </div>
+                <div>
+                    <img src="images/IMG_9487.jpg" alt="7">
+                </div>
             </div>
+
         </section>
 
 
@@ -74,12 +88,58 @@
 
 
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer-container">
+            <ul>
+                <li>
+                    <a href="http://facebook.com"><img src="images/logos/fb_logo.svg" alt="fb-logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://instagram.com">
+                        <img src="images/logos/insta_logo.svg" alt="insta-logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://linkedin.com">
+                        <img src="images/logos/linkedin_logo.svg" alt="lkdin-logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="http://twitter.com">
+                        <img src="images/logos/twitter_logo.svg" alt="twitter-logo">
+                    </a>
+                </li>
+            </ul>
+            <p>Copyright ©2020 All rights reserved</p>
+        </div>
+    </footer>
 
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            items: 3,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
 
-    <script src="jquery-1.9.1.min.js"></script>
-    <script src="assets/owl-carousel/owl.carousel.js"></script>
-    <script src="js/"></script>
+    </script>
 </body>
 
 </html>
