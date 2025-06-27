@@ -1,0 +1,99 @@
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container-works {
+  max-width: 1150px;
+  margin: auto;
+}
+
+.item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.text-container {
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.item-image {
+  width: 200px;
+  min-width: 180px;
+  margin-right: 40px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+  border-radius: 20px;
+  flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main section h1 {
+  text-align: center;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 900;
+  font-size: 48px;
+  color: blueviolet;
+}
+main section h2 {
+  color: black;
+  margin-bottom: 20px;
+}
+main section #socks {
+  color: rgb(15, 92, 95);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+}
+main section #bags {
+  color: rgb(128, 33, 33);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 500;
+}
+main section #other-works {
+  color: rgb(111, 83, 5);
+  font-family: italic;
+  font-weight: 500;
+}
+main section p {
+  margin-bottom: 20px;
+}
+main section #p-discription {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  line-height: 1.6;
+}
+main section .summer-bags-text-cont {
+  background-color: #fef9e7;
+  border-radius: 2%;
+}
+main section .socks-text-cont {
+  background-color: #e0f7fa;
+  border-radius: 2%;
+}
+main section .other-text-cont {
+  background-color: rgb(239, 231, 121);
+  border-radius: 2%;
+}/*# sourceMappingURL=my_works.css.map */

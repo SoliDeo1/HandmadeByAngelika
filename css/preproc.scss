@@ -1,12 +1,30 @@
 $d-flex: flex;
 $main-font: "Work Sans", sans-serif;
-$font-weight200: 200;
-$font-weight500: 500;
-$font-weight900: 900;
-$font-italic: italic;
+$roboto-font: "Roboto Mono", monospace;
+$main-font-weight200: 200;
+$main-font-weight500: 500;
+$main-font-weight900: 900;
+$font-roboto: italic;
+$font-roboto-weight: 200;
+$font-robot-weight: 500;
+$font-roboto-weight: 900;
 $justify-center: center;
 $align-center: center;
 $justify-space-between: space-between;
+
+.roboto-mono {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+header {
+    background-color: lightgoldenrodyellow;
+}
 
 .central-wrapper {
     background-color: azure;
@@ -16,7 +34,6 @@ $justify-space-between: space-between;
 
 nav {
     padding: 10px 20px;
-    margin-bottom: 50px;
 
     .nav-container {
         display: $d-flex;
@@ -27,6 +44,8 @@ nav {
     img {
         width: 75px;
         height: 75px;
+        border-radius: 50%;
+        overflow: hidden;
     }
 
     ul {
@@ -58,21 +77,17 @@ main {
         align-items: center;
     }
 
-    article {
+    .first-text-container {
         max-width: 500px;
     }
 
-    h1 {
+    .first-h1 {
         font-family: $main-font;
-        font-weight: $font-weight900;
+        font-weight: $main-font-weight900;
         font-style: $font-italic;
         margin-bottom: 25px;
     }
 
-    p {
-        font-family: $main-font;
-        font-weight: $font-weight500;
-    }
 
     .main-logo {
         width: 300px;
