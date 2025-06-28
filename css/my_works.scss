@@ -1,23 +1,5 @@
-$d-flex: flex;
-$main-font: "Work Sans", sans-serif;
-$roboto-font: "Roboto Mono", monospace;
-$main-font-weight200: 200;
-$main-font-weight500: 500;
-$main-font-weight900: 900;
-$font-roboto: italic;
-$font-roboto-weight200: 200;
-$font-robot-weight500: 500;
-$font-roboto-weight900: 900;
-$justify-center: center;
-$align-center: center;
-$justify-space-between: space-between;
+@import 'variables';
 
-.roboto-mono {
-    font-family: "Roboto Mono", monospace;
-    font-optical-sizing: auto;
-    font-weight: weight;
-    font-style: normal;
-}
 
 
 * {
@@ -108,6 +90,11 @@ main {
             padding: 20px;
             margin: 20px 0;
             line-height: 1.6;
+
+            li {
+                list-style: none;
+                margin-bottom: 11px;
+            }
         }
 
         .summer-bags-text-cont {

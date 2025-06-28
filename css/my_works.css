@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+.work-sans {
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,6 +91,10 @@ main section #p-discription {
   padding: 20px;
   margin: 20px 0;
   line-height: 1.6;
+}
+main section #p-discription li {
+  list-style: none;
+  margin-bottom: 11px;
 }
 main section .summer-bags-text-cont {
   background-color: #fef9e7;

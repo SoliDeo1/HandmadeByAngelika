@@ -1,0 +1,30 @@
+@import 'variables';
+
+
+footer {
+    margin: auto;
+
+    .footer-container {
+        margin: auto;
+        padding: 190px 0 50px;
+        display: $d-flex;
+        background-color: $color-primary;
+    }
+
+    ul {
+        display: $d-flex;
+        justify-content: $justify-center;
+
+        li {
+
+            list-style: none;
+            margin: 0 17px 25px;
+        }
+
+    }
+}
+
+p {
+    display: block;
+    text-align: center;
+}
