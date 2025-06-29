@@ -1,0 +1,18 @@
+footer {
+    .footer-container {
+        margin-bottom: 25px;
+        ul {
+            display: $d-flex;
+            list-style: none;
+            margin: auto;
+            justify-content: center;
+            margin-bottom: 20px;
+            li {
+                margin: 0 15px;
+            }
+        }
+        p {
+            text-align: center;
+        }
+    }
+}

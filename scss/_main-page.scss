@@ -1,0 +1,97 @@
+body.home {
+    .central-wrapper {
+        padding-top: 170px;
+        margin-bottom: 90px;
+
+    }
+
+    .info-block {
+        display: $d-flex;
+        justify-content: $justify-space-between;
+        align-items: center;
+    }
+
+    .main-logo {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: $justify-center;
+        align-items: center;
+        border: 1px solid rgb(97, 92, 92);
+        border-radius: 50%;
+
+        .main-screen-logo {
+            max-width: 100%;
+            border-radius: 50%;
+
+        }
+    }
+
+    .main-text-container {
+        max-width: 500px;
+        /*   background-image: url('../images/image-back.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center; */
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.works-carussel {
+    background-color: rgb(86, 86, 232);
+    margin-bottom: 50px;
+}
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-carousel .item {
+    height: 450px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.owl-carousel .item img {
+    max-height: 80%;
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
+}
+
+.owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    /* ← важно, чтобы блок не перекрывал */
+}
+
+.owl-nav button.owl-prev,
+.owl-nav button.owl-next {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 5rem !important;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    pointer-events: all;
+    /* ← обязательно, чтобы кнопки были кликабельны */
+    border-radius: 50%;
+}
