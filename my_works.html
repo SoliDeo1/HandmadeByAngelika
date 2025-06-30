@@ -40,8 +40,11 @@
             <div class="container-works container">
                 <h1 id="works">My works</h1>
                 <article class="item-wrapper">
-                    <div class="item-image">
-                        <img src="images/bags/IMG_9472.jpg" alt="bag-picture">
+                    <div class="flip-card" onclick="flipImage(this)">
+                        <div class="flip-inner">
+                            <img class="front" src="images/bags/IMG_9474.jpg" alt="front">
+                            <img class="back" src="images/bags/IMG_9476.jpg" alt="back">
+                        </div>
                     </div>
                     <div class="text-container">
                         <h2 id="bags">👜 Summer Bags</h2>
@@ -57,15 +60,19 @@
                             <li>☀️ 3. Playful & Warm (Lifestyle Blog Tone)
                                 Sun Days Raffia Bag
                                 Made for long lunches and barefoot walks, this raffia bag is your go-to for every
-                                sun-drenched plan. It’s roomy, soft to the touch, and pairs with every linen dress you
+                                sun-drenched plan. It’s roomy, soft to the touch, and pairs with every linen dress
+                                you
                                 own.
                             </li>
                         </ul>
                     </div>
                 </article>
                 <article class="item-wrapper">
-                    <div class="item-image">
-                        <img src="images/socks/IMG_9480.jpg" alt="socks-picture">
+                    <div class="flip-card" onclick="flipImage(this)">
+                        <div class="flip-inner">
+                            <img class="front" src="images/socks/IMG_9485.jpg" alt="front">
+                            <img class="back" src="images/socks/IMG_9484.jpg" alt="back">
+                        </div>
                     </div>
                     <div class="text-container">
                         <h2 id="socks">Winter socks</h2>
@@ -92,29 +99,52 @@
                     </div>
                 </article>
                 <article class="item-wrapper">
-                    <div class="item-image">
-                        <img src="images/other-works/IMG_9928.jpg" alt="other-works-picture">
+                    <div class="flip-card" onclick="flipImage(this)">
+                        <div class="flip-inner">
+                            <img class="front" src="images/other-works/IMG_9928.jpg" alt="front">
+                            <img class="back" src="images/other-works/IMG_9925.jpg" alt="back">
+                        </div>
                     </div>
                     <div class="text-container">
-                        <h2 id="other-works">Other</h2>
+                        <h2 id="other-works">Clothes</h2>
                         <ul id="p-discription" class="other-text-cont">
                             <li>Handmade Knitted Products.</li>
                             <li>Knitted products
                                 are crafted with care, creativity, and
-                                attention to detail.</li>
-                            <li> Eachpiece is a unique expression of artistry, created using traditional
-                                knitting techniques
-                                passed down through generations.
+                                attention to detail.
                             </li>
-                            <li> From cozy scarves and warm hats to stylish sweaters and intricate home
-                                decor, these items combine functionality with charm. Made from quality yarns—often
+                            <li> From cozy 🧣scarves and 🧢 hand-knit hats to 🧥 stylish sweaters and 🧤 mittens, these
+                                items combine functionality with charm.
+                            </li>
+                            <li>Made from quality yarns—often
                                 natural fibers like wool, cotton, or alpaca—knitted handmade
                                 products offer superior warmth, softness, and durability.
                             </li>
-
+                        </ul>
                     </div>
                 </article>
-
+                <article class="item-wrapper">
+                    <div class="flip-card" onclick="flipImage(this)">
+                        <div class="flip-inner">
+                            <img class="front" src="images/other-works/IMG_9491.jpg" alt="front">
+                            <img class="back" src="images/other-works/IMG_9488.jpg" alt="back">
+                        </div>
+                    </div>
+                    <div class="text-container">
+                        <h2 id="other-works">Decoration</h2>
+                        <ul id="p-discription" class="decor-text-cont">
+                            <li>
+                                Handmade Decoration Products
+                            </li>
+                            <li> 
+                                Bring warmth and character into your space with a collection of 🖐️ handmade decorations. Each piece is crafted with care using 🌿 natural materials, traditional techniques, and a touch of modern charm.
+                            </li>
+                            <li>
+                                From rustic wall art to delicate table ornaments, my creations add a unique, personal feel to any 🏠 home. Perfect for 🎁 gifts, seasonal decor, or simply making everyday moments beautiful.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </section>
     </main>
@@ -147,6 +177,7 @@
             <p>Copyright ©2020 All rights reserved</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

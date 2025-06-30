@@ -12,16 +12,12 @@
 }
 
 header {
-  background-color: rgb(178, 230, 90);
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 header .header-text {
-  font-size: large;
+  font-size: 24px;
   font-style: italic;
   -webkit-text-decoration: solid;
           text-decoration: solid;
@@ -50,57 +46,78 @@ header nav .nav-logo {
 }
 
 footer .footer-container {
-  margin-bottom: 25px;
+  max-width: 1050px;
 }
-footer .footer-container ul {
-  display: flex;
-  list-style: none;
-  margin: auto;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-footer .footer-container ul li {
-  margin: 0 15px;
-}
-footer .footer-container p {
+footer p {
   text-align: center;
 }
-
-body.home .central-wrapper {
-  padding-top: 170px;
-  margin-bottom: 90px;
+footer ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
 }
-body.home .info-block {
+footer ul li {
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Для плавности эффекта */
+}
+footer ul li img:hover {
+  transform: scale(1.1);
+  /* Увеличение на 5% */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Тень */
+  cursor: pointer;
+  /* Курсор-палец */
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+}
+body.home::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/pexels-pavel-danilyuk-5788491.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+  opacity: 1;
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.info-block {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-body.home .main-logo {
-  width: 200px;
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid rgb(97, 92, 92);
-  border-radius: 50%;
-}
-body.home .main-logo .main-screen-logo {
-  max-width: 100%;
-  border-radius: 50%;
-}
-body.home .main-text-container {
+
+.main-text-container {
   max-width: 500px;
-  /*   background-image: url('../images/image-back.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
 }
-body.home .main-text-container h1 {
+.main-text-container h1 {
   margin-bottom: 20px;
 }
 
 .works-carussel {
-  background-color: rgb(86, 86, 232);
   margin-bottom: 50px;
 }
 
@@ -120,9 +137,6 @@ body.home .main-text-container h1 {
 .owl-carousel .item img {
   max-height: 80%;
   max-width: 80%;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
   -o-object-fit: contain;
      object-fit: contain;
   display: block;
@@ -138,7 +152,6 @@ body.home .main-text-container h1 {
   display: flex;
   justify-content: space-between;
   pointer-events: none;
-  /* ← важно, чтобы блок не перекрывал */
 }
 
 .owl-nav button.owl-prev,
@@ -148,11 +161,8 @@ body.home .main-text-container h1 {
   border: none;
   padding: 10px;
   font-size: 5rem !important;
-  width: auto;
-  height: auto;
   cursor: pointer;
   pointer-events: all;
-  /* ← обязательно, чтобы кнопки были кликабельны */
   border-radius: 50%;
 }
 
@@ -208,6 +218,9 @@ body.works .socks-text-cont {
 body.works .other-text-cont {
   background-color: rgb(101, 82, 118);
 }
+body.works .decor-text-cont {
+  background-color: rgb(101, 179, 101);
+}
 body.works .text-container {
   padding: 20px;
   flex: 1;
@@ -233,4 +246,33 @@ body.works .text-container ul {
 }
 body.works .text-container ul li {
   margin-bottom: 10px;
+}
+
+.flip-card {
+  width: 200px;
+  height: 300px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.flip-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+.flip-card .flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.flip-card .flip-inner img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+.flip-card .flip-inner img.back {
+  transform: rotateY(180deg);
 }/*# sourceMappingURL=main.css.map */

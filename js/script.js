@@ -10,6 +10,15 @@ $(document).ready(function () {
     });
 });
 
+  function flipImage(card) {
+    card.classList.toggle('flipped');
+  }
+
+/* function flipImage(card) {
+    card.classList.toggle('flipped');
+  } */
+  
+
 /* $(".owl-carousel").owlCarousel({
     nav: true,                    // 🔹 включает стрелки
               // 🔹 можно заменить на SVG или Unicode
