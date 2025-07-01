@@ -15,6 +15,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  font-family: "Dancing Script", sans-serif;
 }
 header .header-text {
   font-size: 24px;
@@ -38,6 +39,7 @@ header nav ul {
 header nav li a {
   margin-right: 20px;
   text-decoration: none;
+  font-size: 19px;
 }
 header nav .nav-logo {
   width: 70px;
@@ -47,9 +49,13 @@ header nav .nav-logo {
 
 footer .footer-container {
   max-width: 1050px;
+  margin: auto;
 }
 footer p {
+  font-family: "Dancing Script", cursive;
   text-align: center;
+  color: black;
+  margin-bottom: 35px;
 }
 footer ul {
   display: flex;
@@ -83,6 +89,10 @@ body.home {
   display: flex;
   flex-direction: column;
   z-index: 0;
+  font-family: "Dancing Script", sans-serif;
+  font-size: 1rem;
+  color: #4B3B47;
+  background-color: #fdf6f8;
 }
 body.home::before {
   content: "";
@@ -93,6 +103,8 @@ body.home::before {
   height: 100%;
   background-image: url("../images/pexels-pavel-danilyuk-5788491.jpg");
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.3);
+  background-blend-mode: darken;
   background-repeat: no-repeat;
   background-position: center;
   z-index: -1;
@@ -106,91 +118,122 @@ main {
 
 .info-block {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: end;
 }
 
 .main-text-container {
-  max-width: 500px;
+  max-width: 600px;
+  background: rgba(136, 89, 123, 0.8);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2); /* тёплая тень */
+  border: 2px solid #f3e1e8;
+  transition: all 0.3s ease;
+}
+.main-text-container .main-text-container:hover {
+  box-shadow: 0 10px 40px rgba(160, 82, 117, 0.3);
 }
 .main-text-container h1 {
   margin-bottom: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
 }
 
-.works-carussel {
-  margin-bottom: 50px;
+/* .works-carussel {
+    margin-bottom: 50px;
 }
 
 .owl-carousel {
-  position: relative;
+    position: relative;
 }
 
 .owl-carousel .item {
-  height: 450px;
-  width: 400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 .owl-carousel .item img {
-  max-height: 80%;
-  max-width: 80%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  display: block;
-  border-radius: 5px;
+    max-height: 80%;
+    max-width: 80%;
+    object-fit: contain;
+    display: block;
+    border-radius: 5px;
 }
 
 .owl-nav {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
 }
 
 .owl-nav button.owl-prev,
 .owl-nav button.owl-next {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 5rem !important;
-  cursor: pointer;
-  pointer-events: all;
-  border-radius: 50%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 5rem !important;
+    cursor: pointer;
+    pointer-events: all;
+    border-radius: 50%;
+} */
+body.works {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+  font-size: 1rem;
+  color: #4B3B47;
+  background-color: #fdf6f8;
 }
-
 body.works .works-section {
   padding-top: 150px;
-  background-color: #fdfdfd;
+  background-color: #fdf6f8;
+  padding: 3rem 1rem;
 }
 body.works .container-works {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 1200px;
+  gap: 3rem;
+  max-width: 1000px;
   margin: 0 auto;
 }
 body.works h1#works {
   text-align: center;
-  font-size: 2rem;
-  margin-bottom: 40px;
+  font-family: "Dancing Script", cursive;
+  color: #A05275;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 body.works .item-wrapper {
   display: flex;
-  gap: 20px;
-  background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  padding: 20px;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 2px solid #f3e1e8;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(160, 82, 117, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+body.works .item-wrapper .item-wrapper:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(160, 82, 117, 0.25);
 }
 body.works .item-wrapper .item-image {
   flex-shrink: 0;
@@ -215,8 +258,8 @@ body.works .summer-bags-text-cont {
 body.works .socks-text-cont {
   background-color: rgb(116, 160, 221);
 }
-body.works .other-text-cont {
-  background-color: rgb(101, 82, 118);
+body.works .clothes-text-cont {
+  background-color: rgb(189, 148, 225);
 }
 body.works .decor-text-cont {
   background-color: rgb(101, 179, 101);
@@ -224,17 +267,19 @@ body.works .decor-text-cont {
 body.works .text-container {
   padding: 20px;
   flex: 1;
+  color: #4B3B47;
 }
 body.works .text-container h2 {
   font-size: 1.4rem;
   margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
 }
-body.works .text-container ul,
-body.works .text-container p {
+body.works .text-container .text-container ul {
+  font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  line-height: 1.5;
-  margin: 0;
-  padding-left: 20px;
+  padding-left: 1.2rem;
+  line-height: 1.7;
 }
 body.works .text-container ul {
   list-style: none;
@@ -253,9 +298,20 @@ body.works .text-container ul li {
   height: 300px;
   perspective: 1000px;
   cursor: pointer;
+  display: inline-block;
+  position: relative;
 }
 .flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
+}
+.flip-card .flip-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  /* чтобы клик проходил через иконку */
 }
 .flip-card .flip-inner {
   position: relative;

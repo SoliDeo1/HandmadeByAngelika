@@ -1,11 +1,15 @@
 footer {
     .footer-container {
         max-width: 1050px;
+        margin: auto;
     }
 
     p {
-        text-align: center
-    };
+        font-family: 'Dancing Script', cursive;
+        text-align: center;
+        color: black;
+        margin-bottom: 35px;
+    }
     ul {
         display: $d-flex;
         justify-content: center;

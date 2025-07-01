@@ -1,32 +1,54 @@
 body.works {
+    position: relative;
+    min-height: 100vh;
+    display: $d-flex;
+    flex-direction: column;
+    z-index: 0;
+    font-size: 1rem;
+    color: #4B3B47;
+    background-color: #fdf6f8;
+
+
     .works-section {
         padding-top: 150px;
-        background-color: #fdfdfd;
+        background-color: #fdf6f8;
+        padding: 3rem 1rem;
     }
 
     .container-works {
-        display: $d-flex;
+        display: flex;
         flex-direction: column;
-        gap: 30px;
-        max-width: 1200px;
+        gap: 3rem;
+        max-width: 1000px;
         margin: 0 auto;
     }
 
     h1#works {
         text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
+        font-family: 'Dancing Script', cursive;
+        color: #A05275;
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
     }
 
     .item-wrapper {
         display: flex;
-        gap: 20px;
-        background-color: #fff;
-        border-radius: 12px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        padding: 20px;
-        align-items: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 2rem;
+        background: rgba(255, 255, 255, 0.9);
+        border: 2px solid #f3e1e8;
+        border-radius: 20px;
+        padding: 2rem;
+        box-shadow: 0 10px 30px rgba(160, 82, 117, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        .item-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(160, 82, 117, 0.25);
+        }
+
 
         .item-image {
             flex-shrink: 0;
@@ -56,8 +78,8 @@ body.works {
         background-color: rgb(116, 160, 221);
     }
 
-    .other-text-cont {
-        background-color: rgb(101, 82, 118);
+    .clothes-text-cont {
+        background-color: rgb(189, 148, 225);
     }
 
     .decor-text-cont {
@@ -67,18 +89,20 @@ body.works {
     .text-container {
         padding: 20px;
         flex: 1;
+        color: #4B3B47;
 
         h2 {
             font-size: 1.4rem;
             margin-bottom: 10px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
         }
 
-        ul,
-        p {
+        .text-container ul {
+            font-family: 'Roboto', sans-serif;
             font-size: 1rem;
-            line-height: 1.5;
-            margin: 0;
-            padding-left: 20px;
+            padding-left: 1.2rem;
+            line-height: 1.7;
         }
 
         ul {
@@ -106,9 +130,21 @@ $card-height: 300px;
     height: $card-height;
     perspective: 1000px;
     cursor: pointer;
+    display: inline-block;
+    position: relative;
 
     &.flipped .flip-inner {
         transform: rotateY(180deg);
+    }
+
+    .flip-icon {
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        font-size: 20px;
+        color: rgba(255, 255, 255, 0.8);
+        pointer-events: none;
+        /* чтобы клик проходил через иконку */
     }
 
     .flip-inner {

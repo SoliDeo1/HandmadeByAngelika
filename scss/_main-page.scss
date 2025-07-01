@@ -12,6 +12,10 @@ body.home {
     display: $d-flex;
     flex-direction: column;
     z-index: 0;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1rem;
+    color: #4B3B47;
+    background-color: #fdf6f8;
 
     &::before {
         content: "";
@@ -22,6 +26,8 @@ body.home {
         height: 100%;
         background-image: url('../images/pexels-pavel-danilyuk-5788491.jpg');
         background-size: cover;
+        background-color: rgba(0, 0, 0, 0.3);
+        background-blend-mode: darken;
         background-repeat: no-repeat;
         background-position: center;
         z-index: -1;
@@ -38,22 +44,35 @@ main {
 // ====== Контент ======
 .info-block {
     display: $d-flex;
-    justify-content: $justify-space-between;
-    align-items: center;
+    justify-content: end;
 }
 
 
 
 .main-text-container {
-    max-width: 500px;
+    max-width: 600px;
+    background: rgba(136, 89, 123, 0.8);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2); /* тёплая тень */
+    border: 2px solid #f3e1e8;
+    transition: all 0.3s ease;
+    .main-text-container:hover {
+        box-shadow: 0 10px 40px rgba(160, 82, 117, 0.3);
+    }
 
     h1 {
         margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        color: #fff;
+        text-align: center;
     }
 }
 
 // ====== Карусель (без изменений) ======
-.works-carussel {
+/* .works-carussel {
     margin-bottom: 50px;
 }
 
@@ -99,6 +118,6 @@ main {
     cursor: pointer;
     pointer-events: all;
     border-radius: 50%;
-}
+} */
 
 // ====== Футер — фиксирует всё ======
