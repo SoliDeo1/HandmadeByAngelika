@@ -1,0 +1,114 @@
+$font-main: 'Dancing Script', cursive;
+$color-bg: #fdf6f8;
+$color-text: #4B3B47;
+$carousel-gap: 16px;
+$carousel-item-size: 250px;
+
+body.collection {
+    font-family: Arial, sans-serif;
+    background-color: $color-bg;
+    color: $color-text;
+    padding: 20px;
+}
+
+h2 {
+    font-family: $font-main;
+    font-size: 2rem;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.category {
+    margin-bottom: 60px;
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    transition: transform 0.3s ease-in-out;
+
+    img {
+        width: auto;
+        max-width: 200px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        flex-shrink: 0;
+        cursor: pointer;
+    }
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px 10px;
+    z-index: 1;
+
+    &.left {
+        left: 0;
+    }
+
+    &.right {
+        right: 0;
+    }
+}
+
+/* footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+} */
+
+.lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.lightbox-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px white;
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    transition: opacity 0.2s ease;
+}

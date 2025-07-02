@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+        <script src="js/script.js"></script>
+
+    <link rel="stylesheet" href="style/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/main.css">
+    <title>Handmade Collection</title>
+</head>
+
+<body class="collection">
+    <header>
+        <nav class="navigation">
+            <div class="nav-container">
+                <div>
+                    <img class="nav-logo" src="images/logo-img.png" alt="authors-logo">
+                </div>
+                <p class="header-text">Handmade by Angelika</p>
+                <ul>
+                    <li>
+                        <a href="index.html">Main</a>
+                    </li>
+                    <li>
+                        <a href="my_works.html">My works</a>
+                    </li>
+                    <li>
+                        <a href="collection.html">Collection</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="category">
+        <h2>Bags</h2>
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="scrollCarousel('bags', -1)">‹</button>
+            <div class="carousel" id="bags">
+                <img src="images/bags/IMG_6601.jpg" alt="Bag 1" />
+                <img src="images/bags/IMG_6309.jpg" alt="Bag 2" />
+                <img src="images/bags/IMG_9912.jpg" alt="Bag 3" />
+                <img src="images/bags/IMG_9472.jpg" alt="Bag 4" />
+                <img src="images/bags/IMG_9911.jpg" alt="Bag 5" />
+                <img src="images/bags/IMG_9920.jpg" alt="Bag 6" />
+                <img src="images/bags/IMG_9910.jpg" alt="Bag 7" />
+                <img src="images/bags/IMG_9476.jpg" alt="Bag 8" />
+                <img src="images/bags/IMG_9471.jpg" alt="Bag 9" />
+                <img src="images/bags/IMG_9469.jpg" alt="Bag 10" />
+
+
+            </div>
+            <button class="carousel-button right" onclick="scrollCarousel('bags', 1)">›</button>
+        </div>
+    </section>
+
+    <section class="category">
+        <h2>Socks</h2>
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="scrollCarousel('socks', -1)">‹</button>
+            <div class="carousel" id="socks">
+                <img src="images/socks/IMG_9915.jpg" alt="Sock 1" />
+                <img src="images/socks/IMG_9481.jpg" alt="Sock 2" />
+                <img src="images/socks/IMG_9482.jpg" alt="Sock 3" />
+                <img src="images/socks/IMG_9483.jpg" alt="Sock 4" />
+                <img src="images/socks/IMG_9484.jpg" alt="Sock 5" />
+                <img src="images/socks/IMG_9485.jpg" alt="Sock 6" />
+            </div>
+            <button class="carousel-button right" onclick="scrollCarousel('socks', 1)">›</button>
+        </div>
+    </section>
+
+    <section class="category">
+        <h2>Other Works</h2>
+        <div class="carousel-container">
+            <button class="carousel-button left" onclick="scrollCarousel('other', -1)">‹</button>
+            <div class="carousel" id="other">
+                <img src="images/other-works/IMG_9924.jpg" alt="Work 1" />
+                <img src="images/other-works/IMG_9465.JPG" alt="Work 2" />
+                <img src="images/other-works/IMG_1988.JPG" alt="Work 3" />
+                <img src="images/other-works/IMG_9921.jpg" alt="Work 4" />
+                <img src="images/other-works/IMG_9488.jpg" alt="Work 5" />
+                <img src="images/other-works/IMG_9489.jpg" alt="Work 6" />
+                <img src="images/other-works/IMG_9925.jpg" alt="Work 7" />
+                <img src="images/other-works/IMG_9924.jpg" alt="Work 8" />
+                <img src="images/other-works/IMG_9922.jpg" alt="Work 9" />
+                <img src="images/other-works/IMG_9923.jpg" alt="Work 10" />
+                <img src="images/other-works/IMG_0098.JPG" alt="Work 10" />
+            </div>
+            <button class="carousel-button right" onclick="scrollCarousel('other', 1)">›</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <ul class="social-list">
+                <li>
+                    <a href="https://www.facebook.com/share/1Yuz4vMEbc/?mibextid=wwXIfr">
+                        <img src="images/logos/fb_logo.svg" alt="Facebook logo" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/handmade_by_angelika?igsh=a3JhY3p2NTBldzQ1">
+                        <img src="images/logos/insta_logo.svg" alt="Instagram logo" />
+                    </a>
+                </li>
+                <li>
+                    <a href="http://linkedin.com">
+                        <img src="images/logos/linkedin_logo.svg" alt="LinkedIn logo" />
+                    </a>
+                </li>
+                <!-- <li>
+                    <a href="http://twitter.com">
+                        <img src="images/logos/twitter_logo.svg" alt="Twitter logo" />
+                    </a>
+                </li> -->
+            </ul>
+            <p>Copyright ©2020 All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        function scrollCarousel(id, direction) {
+            const carousel = document.getElementById(id);
+            const scrollAmount = 270;
+            carousel.scrollBy({
+                left: scrollAmount * direction,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+
+
+    <script>
+        document.querySelectorAll('.carousel img').forEach(img => {
+            img.addEventListener('click', () => {
+                const modal = document.createElement('div');
+                modal.className = 'lightbox-modal';
+                modal.innerHTML = `
+                <div class="lightbox-backdrop"></div>
+                <img src="${img.src}" alt="${img.alt}" />
+                <span class="lightbox-close">&times;</span>`;
+                document.body.appendChild(modal);
+
+                // Закрытие по клику на фон или крестик
+                modal.querySelector('.lightbox-backdrop').addEventListener('click', () => modal.remove());
+                modal.querySelector('.lightbox-close').addEventListener('click', () => modal.remove());
+            });
+        });
+    </script>
+
+</body>
+
+</html>

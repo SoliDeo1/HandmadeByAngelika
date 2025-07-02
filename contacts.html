@@ -1,27 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/preproc.css">
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    
-    <title>Contacts</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
-<body>
+
+<body class="contact-page">
     <header>
         <nav class="navigation">
             <div class="nav-container">
                 <div>
-                    <img class="nav-logo" src="images/img-logo.JPG" alt="authors-logo">
+                    <img class="nav-logo" src="images/logo-img.png" alt="authors-logo">
                 </div>
+                <p class="header-text">Handmade by Angelika</p>
                 <ul>
                     <li>
                         <a href="index.html">Main</a>
@@ -39,37 +34,40 @@
             </div>
         </nav>
     </header>
-    <main>
-        
+    <section class="contact-wrapper">
+        <h1>Contact Me</h1>
+        <!-- <p class="contact-paragr">If you’d like to get in touch, just fill out the form or reach out on social media!</p> -->
 
-    </main>
+        <div class="contact-grid">
+            <!--  <form class="contact-form">
+                <input type="text" placeholder="Your name" required />
+                <input type="email" placeholder="Your email" required />
+                <textarea placeholder="Your message..." required></textarea>
+                <button type="submit">Send Message</button>
+            </form> -->
 
+            <div class="contact-info">
+                <h2>Connect</h2>
+                <p>Email: <a href="mailto:angelika@example.com">angelikarozumnaya@gmail.com</a></p>
+                <p>Instagram: <a href="https://instagram.com/handmade_by_angelika"
+                        target="_blank">@handmade_by_angelika</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/share/1Yuz4vMEbc/?mibextid=wwXIfr">Angelika</a></p>
 
-    <footer>
-        <div class="footer-container">
-            <ul>
-                <li>
-                    <a href="http://facebook.com"><img src="images/logos/fb_logo.svg" alt="fb-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://instagram.com">
-                        <img src="images/logos/insta_logo.svg" alt="insta-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://linkedin.com">
-                        <img src="images/logos/linkedin_logo.svg" alt="lkdin-logo">
-                    </a>
-                </li>
-                <li>
-                    <a href="http://twitter.com">
-                        <img src="images/logos/twitter_logo.svg" alt="twitter-logo">
-                    </a>
-                </li>
-            </ul>
-            <p>Copyright ©2020 All rights reserved</p>
+                <ul class="social-icons">
+                    <li><a href="#"><img src="images/logos/insta_logo.svg" alt="Instagram" /></a></li>
+                    <li><a href="#"><img src="images/logos/fb_logo.svg" alt="Facebook" /></a></li>
+                    <li><a href="#"><img src="images/logos/linkedin_logo.svg" alt="LinkedIn" /></a></li>
+                </ul>
+            </div>
         </div>
+    </section>
+    <footer>
+        <p class="footer-paragr">
+            Copyright ©2020 All rights reserve
+        </p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

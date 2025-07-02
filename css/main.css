@@ -47,6 +47,9 @@ header nav .nav-logo {
   border-radius: 50%;
 }
 
+footer {
+  padding-bottom: 15px;
+}
 footer .footer-container {
   max-width: 1050px;
   margin: auto;
@@ -74,6 +77,132 @@ footer ul li img:hover {
   /* Тень */
   cursor: pointer;
   /* Курсор-палец */
+}
+footer ul svg {
+  filter: drop-shadow(0 0 2px white);
+}
+
+.contact-page {
+  font-family: "Dancing Script", sans-serif;
+  background-color: #f9f6fd;
+  color: #4B3B47;
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.contact-wrapper {
+  text-align: center;
+}
+
+.contact-wrapper h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-wrapper p {
+  color: #6a4e57;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.contact-paragr {
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.contact-form,
+.contact-info {
+  flex: 1 1;
+  background: #c9b6e2;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #dd8092;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #d47f94;
+} */
+.contact-info {
+  text-align: left;
+}
+
+.contact-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info a {
+  color: #79404e;
+  text-decoration: none;
+}
+
+.contact-info p {
+  text-align: center;
+  font-size: 26px;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
 }
 
 html,
@@ -137,7 +266,15 @@ main {
   margin-bottom: 20px;
   text-align: center;
   font-family: "Roboto", sans-serif;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #fff;
+  text-align: center;
+}
+.main-text-container p {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
   color: #fff;
   text-align: center;
 }
@@ -331,4 +468,110 @@ body.works .text-container ul li {
 }
 .flip-card .flip-inner img.back {
   transform: rotateY(180deg);
+}
+
+body.collection {
+  font-family: Arial, sans-serif;
+  background-color: #fdf6f8;
+  color: #4B3B47;
+  padding: 20px;
+}
+
+h2 {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.category {
+  margin-bottom: 60px;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  transition: transform 0.3s ease-in-out;
+}
+.carousel img {
+  width: auto;
+  max-width: 200px;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 4px 10px;
+  z-index: 1;
+}
+.carousel-button.left {
+  left: 0;
+}
+.carousel-button.right {
+  right: 0;
+}
+
+/* footer {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+} */
+.lightbox-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.lightbox-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1001;
+  transition: opacity 0.2s ease;
 }/*# sourceMappingURL=main.css.map */

@@ -10,14 +10,13 @@ $(document).ready(function () {
     });
 });
 
-  function flipImage(card) {
-    card.classList.toggle('flipped');
-  }
+function flipImage(card) {
+    card.classList.toggle("flipped");
+}
 
 /* function flipImage(card) {
     card.classList.toggle('flipped');
   } */
-  
 
 /* $(".owl-carousel").owlCarousel({
     nav: true,                    // 🔹 включает стрелки
@@ -32,3 +31,15 @@ $(document).ready(function () {
       1000: { items: 3 }
     }
   }); */
+document.querySelectorAll(".carousel img").forEach((img) => {
+    img.addEventListener("click", () => {
+        const modal = document.createElement("div");
+        modal.className = "image-modal";
+        modal.innerHTML = `
+        <div class="image-modal-bg"></div>
+        <img src="${img.src}" alt="${img.alt}" />
+      `;
+        document.body.appendChild(modal);
+        modal.addEventListener("click", () => modal.remove());
+    });
+});
