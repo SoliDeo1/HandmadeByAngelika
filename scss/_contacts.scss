@@ -1,10 +1,14 @@
+$font-main: 'Dancing Script', cursive;
+$color-bg: #fdf6f8;
+$color-text: #4B3B47;
+$carousel-gap: 16px;
+$carousel-item-size: 250px;
 
 
-
-.contact-page {
+body.contact-page {
     font-family: 'Dancing Script', sans-serif;
     background-color: #f9f6fd;
-    color: #4B3B47;
+    color: $color-text;
     padding: 3rem 1rem;
     max-width: 1200px;
     margin: auto;

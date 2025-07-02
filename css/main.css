@@ -82,7 +82,7 @@ footer ul svg {
   filter: drop-shadow(0 0 2px white);
 }
 
-.contact-page {
+body.contact-page {
   font-family: "Dancing Script", sans-serif;
   background-color: #f9f6fd;
   color: #4B3B47;
