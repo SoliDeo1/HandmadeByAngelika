@@ -7,6 +7,7 @@ footer {
 
     p {
         font-family: 'Dancing Script', cursive;
+        font-size: 10px;
         text-align: center;
         color: black;
         margin-bottom: 35px;
@@ -21,6 +22,10 @@ footer {
             padding: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             /* Для плавности эффекта */
+            img {
+                width: 20px;
+                height: 20px;
+            }
         }
 
         li img:hover {

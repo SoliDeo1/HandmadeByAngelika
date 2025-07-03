@@ -15,14 +15,19 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  font-family: "Dancing Script", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+header .nav-logo-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header .header-text {
-  font-size: 30px;
+  font-size: 20px;
   font-style: italic;
   -webkit-text-decoration: solid;
           text-decoration: solid;
-  color: rgb(67, 21, 68);
+  color: rgb(5, 5, 5);
 }
 header nav {
   padding: 10px 10px;
@@ -45,6 +50,7 @@ header nav .nav-logo {
   width: 70px;
   height: 70px;
   border-radius: 50%;
+  margin-left: 25px;
 }
 
 footer {
@@ -56,6 +62,7 @@ footer .footer-container {
 }
 footer p {
   font-family: "Dancing Script", cursive;
+  font-size: 10px;
   text-align: center;
   color: black;
   margin-bottom: 35px;
@@ -69,6 +76,10 @@ footer ul li {
   padding: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* Для плавности эффекта */
+}
+footer ul li img {
+  width: 20px;
+  height: 20px;
 }
 footer ul li img:hover {
   transform: scale(1.1);
@@ -351,11 +362,11 @@ body.works {
   z-index: 0;
   font-size: 1rem;
   color: #4B3B47;
-  background-color: #fdf6f8;
+  background-color: #ffffff;
 }
 body.works .works-section {
   padding-top: 150px;
-  background-color: #fdf6f8;
+  background-color: #ffffff;
   padding: 3rem 1rem;
 }
 body.works .container-works {
@@ -378,7 +389,7 @@ body.works .item-wrapper {
   flex-wrap: wrap;
   align-items: center;
   gap: 2rem;
-  background: rgba(234, 216, 234, 0.9);
+  background: #f3e9dc;
   border: 2px solid #f3e1e8;
   border-radius: 20px;
   padding: 2rem;
@@ -407,16 +418,16 @@ body.works .item-image img {
   display: block;
 }
 body.works .summer-bags-text-cont {
-  background-color: rgb(206, 163, 76);
+  background-color: rgb(201, 230, 221);
 }
 body.works .socks-text-cont {
-  background-color: rgb(116, 160, 221);
+  background-color: rgb(201, 230, 221);
 }
 body.works .clothes-text-cont {
-  background-color: rgb(189, 148, 225);
+  background-color: rgb(201, 230, 221);
 }
 body.works .decor-text-cont {
-  background-color: rgb(101, 179, 101);
+  background-color: rgb(201, 230, 221);
 }
 body.works .text-container {
   padding: 20px;
