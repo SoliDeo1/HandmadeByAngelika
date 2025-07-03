@@ -3,6 +3,13 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 // ====== Фоновое изображение на всю страницу ======
@@ -50,13 +57,17 @@ main {
 
 
 .main-text-container {
-    max-width: 600px;
+    max-width: 90vw;
+    width: 100%;
+    box-sizing: border-box;
     background: rgba(136, 89, 123, 0.8);
     padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2); /* тёплая тень */
+    box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
+    /* тёплая тень */
     border: 2px solid #f3e1e8;
     transition: all 0.3s ease;
+
     .main-text-container:hover {
         box-shadow: 0 10px 40px rgba(160, 82, 117, 0.3);
     }
@@ -69,6 +80,7 @@ main {
         color: #fff;
         text-align: center;
     }
+
     p {
         margin-bottom: 20px;
         text-align: center;

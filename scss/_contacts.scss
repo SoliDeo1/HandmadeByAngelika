@@ -1,3 +1,8 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+
 $font-main: 'Dancing Script', cursive;
 $color-bg: #fdf6f8;
 $color-text: #4B3B47;
