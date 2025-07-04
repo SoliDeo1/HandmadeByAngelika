@@ -2,35 +2,6 @@ function flipImage(card) {
     card.classList.toggle("flipped");
 }
 
-/* document.querySelectorAll(".carousel img").forEach((img) => {
-    img.addEventListener("click", () => {
-        const modal = document.createElement("div");
-        modal.className = "lightbox-modal";
-        modal.innerHTML = `
-        <div class="lightbox-backdrop"></div>
-        <img src="${img.src}" alt="${img.alt}" />
-        <span class="lightbox-close">&times;</span>`;
-        document.body.appendChild(modal);
-
-        // Закрытие по клику на фон или крестик
-        modal
-            .querySelector(".lightbox-backdrop")
-            .addEventListener("click", () => modal.remove());
-        modal
-            .querySelector(".lightbox-close")
-            .addEventListener("click", () => modal.remove());
-    });
-}); */
-
-/* function scrollCarousel(id, direction) {
-    const carousel = document.getElementById(id);
-    const scrollAmount = 270;
-    carousel.scrollBy({
-        left: scrollAmount * direction,
-        behavior: "smooth",
-    });
-}  */
-
 document.addEventListener("DOMContentLoaded", () => {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");

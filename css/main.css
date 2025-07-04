@@ -41,10 +41,11 @@ header nav ul {
   display: flex;
   list-style: none;
 }
-header nav li a {
+header nav ul li a {
   margin-right: 20px;
   text-decoration: none;
-  font-size: 19px;
+  font-size: 16px;
+  color: black;
 }
 header nav .nav-logo {
   width: 70px;
@@ -303,53 +304,6 @@ main {
   text-align: center;
 }
 
-/* .works-carussel {
-    margin-bottom: 50px;
-}
-
-.owl-carousel {
-    position: relative;
-}
-
-.owl-carousel .item {
-    height: 450px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.owl-carousel .item img {
-    max-height: 80%;
-    max-width: 80%;
-    object-fit: contain;
-    display: block;
-    border-radius: 5px;
-}
-
-.owl-nav {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    pointer-events: none;
-}
-
-.owl-nav button.owl-prev,
-.owl-nav button.owl-next {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    font-size: 5rem !important;
-    cursor: pointer;
-    pointer-events: all;
-    border-radius: 50%;
-} */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -360,7 +314,6 @@ body.works {
   display: flex;
   flex-direction: column;
   z-index: 0;
-  font-size: 1rem;
   color: #4B3B47;
   background-color: #ffffff;
 }
@@ -400,6 +353,12 @@ body.works .item-wrapper .item-wrapper:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(160, 82, 117, 0.25);
 }
+body.works .item-wrapper .works-items-name {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+}
 body.works .item-wrapper .item-image {
   flex-shrink: 0;
 }
@@ -433,12 +392,6 @@ body.works .text-container {
   padding: 20px;
   flex: 1;
   color: #4B3B47;
-}
-body.works .text-container h2 {
-  font-size: 1.4rem;
-  margin-bottom: 10px;
-  font-family: "Dancing Script", cursive;
-  font-size: 2rem;
 }
 body.works .text-container .text-container ul {
   font-family: "Roboto", sans-serif;
@@ -565,76 +518,42 @@ h2 {
   right: 0;
 }
 
-/* footer {
-    margin-top: 60px;
-    text-align: center;
-    font-size: 0.9rem;
-    margin-bottom: 25px;
-} */
-.lightbox-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.lightbox-modal img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px white;
-}
-
-.lightbox-backdrop {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1001;
-  transition: opacity 0.2s ease;
-}
-
+/* Lightbox Styles */
 .lightbox {
+  display: none;
+  opacity: 0;
+  pointer-events: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  display: flex;
+  background: rgba(0, 0, 0, 0.85);
   align-items: center;
   justify-content: center;
-  z-index: 1000;
   transition: opacity 0.3s ease;
+  z-index: 1000;
 }
 
 .lightbox.hidden {
-    display: none;
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.lightbox.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px white;
+  display: block;
 }
 
 .lightbox-close,

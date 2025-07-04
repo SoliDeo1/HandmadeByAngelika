@@ -28,18 +28,19 @@ header {
 
         }
         ul {
-    
             display: $d-flex;
             list-style: none;
-        }
-        li {
-            a {
-                margin-right: 20px;
-                text-decoration: none;
-                font-size: 19px;
-                
+
+            li {
+                a {
+                    margin-right: 20px;
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: black;
+                }
             }
         }
+        
         .nav-logo {
             width: 70px;
             height: 70px;
