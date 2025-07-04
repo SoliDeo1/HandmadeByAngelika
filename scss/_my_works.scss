@@ -10,10 +10,11 @@ body.works {
     display: $d-flex;
     flex-direction: column;
     z-index: 0;
-    font-size: 1rem;
+    // font-size: 1rem;
     color: #4B3B47;
     background-color: #ffffff;
 
+    
 
     .works-section {
         padding-top: 150px;
@@ -55,6 +56,12 @@ body.works {
             box-shadow: 0 15px 40px rgba(160, 82, 117, 0.25);
         }
 
+        .works-items-name {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+        }
 
         .item-image {
             flex-shrink: 0;
@@ -97,12 +104,7 @@ body.works {
         flex: 1;
         color: #4B3B47;
 
-        h2 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-        }
+        
 
         .text-container ul {
             font-family: 'Roboto', sans-serif;

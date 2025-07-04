@@ -1,53 +1,11 @@
-/* $(document).ready(function () {
-    $(".owl-carousel").owlCarousel({
-        items: 1, // или 2, 3, сколько нужно
-        loop: true,
-        margin: 10,
-        nav: true,
-        navText: ["←", "→"],
-        autoplay: true,
-        autoplayTimeout: 3000,
-    });
-}); */
-
 function flipImage(card) {
     card.classList.toggle("flipped");
 }
 
-/* function flipImage(card) {
-    card.classList.toggle('flipped');
-  } */
-
-/* $(".owl-carousel").owlCarousel({
-    nav: true,                    // 🔹 включает стрелки
-              // 🔹 можно заменить на SVG или Unicode
-    loop: true,
-    margin: 10,
-    items: 3,
-    autoplay: true,
-    responsive: {
-      0: { items: 1 },
-      600: { items: 2 },
-      1000: { items: 3 }
-    }
-  }); */
 /* document.querySelectorAll(".carousel img").forEach((img) => {
     img.addEventListener("click", () => {
         const modal = document.createElement("div");
-        modal.className = "image-modal";
-        modal.innerHTML = `
-        <div class="image-modal-bg"></div>
-        <img src="${img.src}" alt="${img.alt}" />
-      `;
-        document.body.appendChild(modal);
-        modal.addEventListener("click", () => modal.remove());
-    });
-}); */
-
-document.querySelectorAll('.carousel img').forEach(img => {
-    img.addEventListener('click', () => {
-        const modal = document.createElement('div');
-        modal.className = 'lightbox-modal';
+        modal.className = "lightbox-modal";
         modal.innerHTML = `
         <div class="lightbox-backdrop"></div>
         <img src="${img.src}" alt="${img.alt}" />
@@ -55,16 +13,109 @@ document.querySelectorAll('.carousel img').forEach(img => {
         document.body.appendChild(modal);
 
         // Закрытие по клику на фон или крестик
-        modal.querySelector('.lightbox-backdrop').addEventListener('click', () => modal.remove());
-        modal.querySelector('.lightbox-close').addEventListener('click', () => modal.remove());
+        modal
+            .querySelector(".lightbox-backdrop")
+            .addEventListener("click", () => modal.remove());
+        modal
+            .querySelector(".lightbox-close")
+            .addEventListener("click", () => modal.remove());
     });
-});
+}); */
 
-function scrollCarousel(id, direction) {
+/* function scrollCarousel(id, direction) {
     const carousel = document.getElementById(id);
     const scrollAmount = 270;
     carousel.scrollBy({
         left: scrollAmount * direction,
-        behavior: 'smooth'
+        behavior: "smooth",
+    });
+}  */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const allImages = Array.from(document.querySelectorAll(".carousel img"));
+    let currentIndex = -1;
+
+    // Открытие лайтбокса при клике
+    allImages.forEach((img, index) => {
+        img.addEventListener("click", () => {
+            currentIndex = index;
+            openLightbox();
+        });
+    });
+
+    function openLightbox() {
+        lightboxImg.src = allImages[currentIndex].src;
+        lightbox.classList.remove("hidden"); // убрать hidden
+        lightbox.classList.add("active");    // добавить active
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove("active");  // убрать active
+        lightbox.classList.add("hidden");     // добавить hidden
+        lightboxImg.src = "";
+        currentIndex = -1;
+    }
+    
+    window.closeLightbox = closeLightbox;
+    function navigateLightbox(direction) {
+        if (currentIndex === -1) return;
+        currentIndex =
+            (currentIndex + direction + allImages.length) % allImages.length;
+        lightboxImg.src = allImages[currentIndex].src;
+    }
+    window.navigateLightbox = navigateLightbox;
+
+    // Кнопки навигации и закрытия
+    document
+        .querySelector(".lightbox-close")
+        .addEventListener("click", closeLightbox);
+    document
+        .querySelector(".lightbox-nav.left")
+        .addEventListener("click", () => navigateLightbox(-1));
+    document
+        .querySelector(".lightbox-nav.right")
+        .addEventListener("click", () => navigateLightbox(1));
+
+    // Закрытие при клике на фон
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Навигация с клавиатуры
+    document.addEventListener("keydown", (e) => {
+        if (!lightbox.classList.contains("active")) return;
+
+        if (e.key === "ArrowLeft") navigateLightbox(-1);
+        else if (e.key === "ArrowRight") navigateLightbox(1);
+        else if (e.key === "Escape") closeLightbox();
+    });
+
+    // Навигация свайпом на мобильных
+    let touchStartX = 0;
+    lightbox.addEventListener("touchstart", (e) => {
+        touchStartX = e.touches[0].clientX;
+    });
+
+    lightbox.addEventListener("touchend", (e) => {
+        const touchEndX = e.changedTouches[0].clientX;
+        const deltaX = touchStartX - touchEndX;
+        if (Math.abs(deltaX) > 50) {
+            navigateLightbox(deltaX > 0 ? 1 : -1);
+        }
+    });
+
+});
+
+// Прокрутка карусели (глобально, чтобы работало через inline onclick)
+function scrollCarousel(carouselId, direction) {
+    const carousel = document.getElementById(carouselId);
+    const scrollAmount = 300;
+    carousel.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth",
     });
 }
