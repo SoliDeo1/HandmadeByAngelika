@@ -1,10 +1,10 @@
-html,
+/* html,
 body {
     height: 100%;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-}
+} */
 
 *,
 *::before,
@@ -23,6 +23,7 @@ body.home {
     font-size: 1rem;
     color: #4B3B47;
     background-color: #fdf6f8;
+    padding: 0 20px;
 
     &::before {
         content: "";
@@ -45,7 +46,6 @@ body.home {
 // ====== Основная часть (занимает всё свободное пространство) ======
 main {
     flex: 1;
-    padding: 2rem;
 }
 
 // ====== Контент ======

@@ -16,6 +16,7 @@ header {
   left: 0;
   width: 100%;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 35px;
 }
 header .nav-logo-name {
   display: flex;
@@ -101,9 +102,9 @@ footer ul svg {
 
 body.contact-page {
   font-family: "Dancing Script", sans-serif;
-  background-color: #f9f6fd;
+  background-color: #e1d8db;
   color: #4B3B47;
-  padding: 1rem 0.7rem;
+  padding: 0 20px;
   margin: auto;
 }
 
@@ -112,7 +113,7 @@ body.contact-page {
 }
 
 .contact-wrapper h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -137,7 +138,7 @@ body.contact-page {
 .contact-form,
 .contact-info {
   flex: 1 1;
-  background: #c9b6e2;
+  background: #a8a59a;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -158,11 +159,13 @@ body.contact-page {
 }
 
 .social-names {
-  font-family: "Roboto", sans-serif;
+  font-family: "Dancing Script", cursive;
   color: #4B3B47;
+  font-size: 2rem;
 }
 .social-names a {
-  font-family: "Dancing Script", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
 }
 
 .contact-info p {
@@ -178,14 +181,13 @@ body.contact-page {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 1rem;
   margin-top: 1rem;
   padding: 0;
 }
 
 .social-icons img {
-  width: 32px;
-  height: 32px;
+  width: 20px;
+  height: 20px;
   transition: transform 0.3s;
 }
 
@@ -196,19 +198,14 @@ body.contact-page {
 .contacts-footer {
   margin-top: 100px;
 }
-.contacts-footer ul li img {
-  width: 20px;
-  height: 20px;
-}
 
-html,
+/* html,
 body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+} */
 *,
 *::before,
 *::after {
@@ -225,6 +222,7 @@ body.home {
   font-size: 1rem;
   color: #4B3B47;
   background-color: #fdf6f8;
+  padding: 0 20px;
 }
 body.home::before {
   content: "";
@@ -245,7 +243,6 @@ body.home::before {
 
 main {
   flex: 1;
-  padding: 2rem;
 }
 
 .info-block {
@@ -294,40 +291,24 @@ body.works {
   flex-direction: column;
   z-index: 0;
   color: #4B3B47;
-  background-color: #ffffff;
-  /* .summer-bags-text-cont {
-      background-color: rgb(201, 230, 221);
-  }
-
-  .socks-text-cont {
-      background-color: rgb(201, 230, 221);
-  }
-
-  .clothes-text-cont {
-      background-color: rgb(201, 230, 221);
-  }
-
-  .decor-text-cont {
-      background-color: rgb(201, 230, 221);
-  } */
+  background-color: #e1d8db;
+  padding: 0 20px;
 }
 body.works .works-section {
-  padding-top: 150px;
   background-color: #ffffff;
-  padding: 3rem 1rem;
 }
 body.works .container-works {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
   max-width: 1000px;
   margin: 0 auto;
+  background-color: #e1d8db;
 }
 body.works h1#works {
   text-align: center;
   font-family: "Dancing Script", cursive;
   color: #A05275;
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -335,13 +316,13 @@ body.works .item-wrapper {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 2rem;
   background: #f3e9dc;
-  border: 2px solid #f3e1e8;
+  border: 2px solid #e9d6dd;
   border-radius: 20px;
-  padding: 2rem;
   box-shadow: 0 10px 30px rgba(160, 82, 117, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 0 15px;
+  margin-bottom: 20px;
 }
 body.works .item-wrapper .item-wrapper:hover {
   transform: translateY(-5px);
@@ -386,7 +367,6 @@ body.works .text-container ul {
   padding-left: 20px;
   padding: 15px 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   margin-top: 10px;
 }
 body.works .text-container ul li {
@@ -441,9 +421,9 @@ body.works .text-container ul li {
 
 body.collection {
   font-family: Arial, sans-serif;
-  background-color: #fdf6f8;
+  background-color: #e1d8db;
   color: #4B3B47;
-  padding: 20px;
+  padding: 0 20px;
   overflow-x: hidden;
 }
 

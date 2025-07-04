@@ -5,7 +5,7 @@
 }
 
 $font-main: 'Dancing Script', cursive;
-$color-bg: #fdf6f8;
+$color-bg: #e1d8db;
 $color-text: #4B3B47;
 $carousel-gap: 16px;
 $carousel-item-size: 250px;
@@ -14,7 +14,7 @@ body.collection {
     font-family: Arial, sans-serif;
     background-color: $color-bg;
     color: $color-text;
-    padding: 20px;
+    padding: 0 20px;
     overflow-x: hidden;
 }
 
