@@ -44,6 +44,7 @@ header nav ul {
 header nav ul li a {
   margin-right: 20px;
   text-decoration: none;
+  font-weight: 500;
   font-size: 16px;
   color: black;
 }
@@ -63,10 +64,9 @@ footer .footer-container {
 }
 footer p {
   font-family: "Dancing Script", cursive;
-  font-size: 10px;
+  font-size: 8px;
   text-align: center;
   color: black;
-  margin-bottom: 35px;
 }
 footer ul {
   display: flex;
@@ -74,7 +74,8 @@ footer ul {
   list-style: none;
 }
 footer ul li {
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* Для плавности эффекта */
 }
@@ -102,8 +103,7 @@ body.contact-page {
   font-family: "Dancing Script", sans-serif;
   background-color: #f9f6fd;
   color: #4B3B47;
-  padding: 3rem 1rem;
-  max-width: 1200px;
+  padding: 1rem 0.7rem;
   margin: auto;
 }
 
@@ -143,42 +143,6 @@ body.contact-page {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    background-color: #fff;
-}
-
-.contact-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-.contact-form button {
-    background-color: #dd8092;
-    color: white;
-    border: none;
-    padding: 0.75rem;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: background 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #d47f94;
-} */
 .contact-info {
   text-align: left;
 }
@@ -191,6 +155,14 @@ body.contact-page {
 .contact-info a {
   color: #79404e;
   text-decoration: none;
+}
+
+.social-names {
+  font-family: "Roboto", sans-serif;
+  color: #4B3B47;
+}
+.social-names a {
+  font-family: "Dancing Script", cursive;
 }
 
 .contact-info p {
@@ -219,6 +191,14 @@ body.contact-page {
 
 .social-icons img:hover {
   transform: scale(1.1);
+}
+
+.contacts-footer {
+  margin-top: 100px;
+}
+.contacts-footer ul li img {
+  width: 20px;
+  height: 20px;
 }
 
 html,
@@ -281,7 +261,6 @@ main {
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
   /* тёплая тень */
-  border: 2px solid #f3e1e8;
   transition: all 0.3s ease;
 }
 .main-text-container .main-text-container:hover {
@@ -316,6 +295,21 @@ body.works {
   z-index: 0;
   color: #4B3B47;
   background-color: #ffffff;
+  /* .summer-bags-text-cont {
+      background-color: rgb(201, 230, 221);
+  }
+
+  .socks-text-cont {
+      background-color: rgb(201, 230, 221);
+  }
+
+  .clothes-text-cont {
+      background-color: rgb(201, 230, 221);
+  }
+
+  .decor-text-cont {
+      background-color: rgb(201, 230, 221);
+  } */
 }
 body.works .works-section {
   padding-top: 150px;
@@ -375,18 +369,6 @@ body.works .item-image img {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-}
-body.works .summer-bags-text-cont {
-  background-color: rgb(201, 230, 221);
-}
-body.works .socks-text-cont {
-  background-color: rgb(201, 230, 221);
-}
-body.works .clothes-text-cont {
-  background-color: rgb(201, 230, 221);
-}
-body.works .decor-text-cont {
-  background-color: rgb(201, 230, 221);
 }
 body.works .text-container {
   padding: 20px;
