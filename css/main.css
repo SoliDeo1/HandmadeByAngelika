@@ -280,7 +280,9 @@ main {
   text-align: center;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -295,14 +297,18 @@ body.works {
   padding: 0 20px;
 }
 body.works .works-section {
-  background-color: #ffffff;
+  background-color: #e1d8db;
 }
 body.works .container-works {
   display: flex;
   flex-direction: column;
-  max-width: 1000px;
   margin: 0 auto;
   background-color: #e1d8db;
+}
+@media (max-width: 480px) {
+  body.works .container-works {
+    padding: 10px;
+  }
 }
 body.works h1#works {
   text-align: center;
@@ -315,74 +321,91 @@ body.works h1#works {
 body.works .item-wrapper {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  background: #f3e9dc;
-  border: 2px solid #e9d6dd;
+  gap: 20px;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 25px;
+  background-color: #b9b9b8;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(160, 82, 117, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  padding: 0 15px;
-  margin-bottom: 20px;
 }
-body.works .item-wrapper .item-wrapper:hover {
+@media (max-width: 768px) {
+  body.works .item-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+body.works .item-wrapper:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(160, 82, 117, 0.25);
 }
-body.works .item-wrapper .works-items-name {
-  font-size: 1.8rem;
+body.works .works-items-name {
+  font-size: clamp(1.4rem, 2vw, 2rem);
   margin-bottom: 10px;
   font-family: "Dancing Script", cursive;
   font-size: 2rem;
 }
-body.works .item-wrapper .item-image {
+body.works .item-image {
   flex-shrink: 0;
 }
-body.works .item-wrapper .item-image img {
+body.works .item-image img {
   width: 250px;
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
 }
-body.works .item-image img {
+
+.item-image img {
   width: 100%;
   height: 320px;
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
-body.works .text-container {
+
+.text-container {
   padding: 20px;
   flex: 1;
   color: #4B3B47;
+  min-width: 250px;
 }
-body.works .text-container .text-container ul {
+@media (max-width: 768px) {
+  .text-container {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+.text-container .text-container ul {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   padding-left: 1.2rem;
   line-height: 1.7;
 }
-body.works .text-container ul {
+.text-container ul {
   list-style: none;
   padding-left: 20px;
-  padding: 15px 20px;
+  padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
 }
-body.works .text-container ul li {
+.text-container ul li {
   margin-bottom: 10px;
 }
 
 .flip-card {
-  width: 200px;
-  height: 300px;
-  perspective: 1000px;
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
+  width: 100%;
+  max-width: 220px;
+  aspect-ratio: 2/3;
+  margin: 0 auto;
 }
 .flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
+}
+@media (max-width: 768px) {
+  .flip-card .flip-card {
+    max-width: 70vw;
+    aspect-ratio: 2/3;
+  }
 }
 .flip-card .flip-icon {
   position: absolute;
@@ -408,6 +431,7 @@ body.works .text-container ul li {
      object-fit: cover;
   backface-visibility: hidden;
   border-radius: 10px;
+  max-width: 100%;
 }
 .flip-card .flip-inner img.back {
   transform: rotateY(180deg);

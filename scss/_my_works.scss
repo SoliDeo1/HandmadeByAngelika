@@ -1,7 +1,9 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  
+}
+
 
 
 body.works {
@@ -12,21 +14,27 @@ body.works {
     z-index: 0;
     // font-size: 1rem;
     color: #4B3B47;
-    background-color: #e1d8db;;
+    background-color: #e1d8db;
+    ;
     padding: 0 20px;
 
-    
+
 
     .works-section {
-        background-color: #ffffff;
+        background-color: #e1d8db;
     }
 
     .container-works {
         display: flex;
         flex-direction: column;
-        max-width: 1000px;
+        // max-width: 1000px;
         margin: 0 auto;
-        background-color: #e1d8db;;
+        background-color: #e1d8db;
+        // padding: 20px;
+
+        @media(max-width: 480px) {
+            padding: 10px;
+        }
     }
 
     h1#works {
@@ -41,92 +49,106 @@ body.works {
     .item-wrapper {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        background: #f3e9dc;
-        border: 2px solid #e9d6dd;
+        gap: 20px;
+        justify-content: space-between;
+        padding: 15px;
+        margin-bottom: 25px;
+        background-color: #b9b9b8;
         border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(160, 82, 117, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        padding: 0 15px;
-        margin-bottom: 20px;
 
-        .item-wrapper:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(160, 82, 117, 0.25);
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
         }
-
-        .works-items-name {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-            font-family: 'Dancing Script', cursive;
-            font-size: 2rem;
-        }
-
-        .item-image {
-            flex-shrink: 0;
-
-            img {
-                width: 250px;
-                height: 350px;
-                object-fit: cover;
-                border-radius: 10px;
-            }
-        }
-
     }
 
-    .item-image img {
-        width: 100%;
-        height: 320px;
-        object-fit: cover;
-        display: block;
+    .item-wrapper:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(160, 82, 117, 0.25);
     }
 
-
-    .text-container {
-        padding: 20px;
-        flex: 1;
-        color: #4B3B47;
-
-        
-
-        .text-container ul {
-            font-family: 'Roboto', sans-serif;
-            font-size: 1rem;
-            padding-left: 1.2rem;
-            line-height: 1.7;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 20px;
-            padding: 15px 20px; // 🔸 Внутренние отступы
-            border-radius: 10px; // 🔘 Скругление углов
-            // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); // ✨ Лёгкая тень
-            margin-top: 10px;
-
-            li {
-                margin-bottom: 10px;
-            }
-        }
-
+    .works-items-name {
+        font-size: clamp(1.4rem, 2vw, 2rem);
+        margin-bottom: 10px;
+        font-family: 'Dancing Script', cursive;
+        font-size: 2rem;
     }
+
+    .item-image {
+        flex-shrink: 0;
+
+        img {
+            width: 250px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+
 }
 
+.item-image img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.text-container {
+    padding: 20px;
+    flex: 1;
+    color: #4B3B47;
+    min-width: 250px;
+
+    @media (max-width: 768px) {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+
+    .text-container ul {
+        font-family: 'Roboto', sans-serif;
+        font-size: 1rem;
+        padding-left: 1.2rem;
+        line-height: 1.7;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 20px;
+        padding: 10px; // 🔸 Внутренние отступы
+        border-radius: 10px; // 🔘 Скругление углов
+        // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); // ✨ Лёгкая тень
+        margin-top: 10px;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+
 $flip-duration: 0.6s;
-$card-width: 200px;
-$card-height: 300px;
+$card-width: 100%;
+$card-max-width: auto;
 
 .flip-card {
-    width: $card-width;
-    height: $card-height;
-    perspective: 1000px;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 2 / 3; // Заменяет фиксированную высоту
+    margin: 0 auto;
 
     &.flipped .flip-inner {
         transform: rotateY(180deg);
+    }
+
+    @media (max-width: 768px) {
+        .flip-card {
+            max-width: 70vw;
+            aspect-ratio: 2 / 3;
+        }
     }
 
     .flip-icon {
@@ -153,6 +175,7 @@ $card-height: 300px;
             object-fit: cover;
             backface-visibility: hidden;
             border-radius: 10px;
+            max-width: 100%;
 
             &.back {
                 transform: rotateY(180deg);
