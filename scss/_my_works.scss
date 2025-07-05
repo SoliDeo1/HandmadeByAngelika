@@ -144,12 +144,7 @@ $card-max-width: auto;
         transform: rotateY(180deg);
     }
 
-    @media (max-width: 768px) {
-        .flip-card {
-            max-width: 70vw;
-            aspect-ratio: 2 / 3;
-        }
-    }
+    
 
     .flip-icon {
         position: absolute;
@@ -159,8 +154,7 @@ $card-max-width: auto;
         color: rgba(255, 255, 255, 0.8);
         pointer-events: none;
         z-index: 2;
-        backface-visibility: hidden; // <--- ВАЖНО!
-        transform: none !important; 
+        
     }
 
     .flip-inner {
@@ -183,5 +177,12 @@ $card-max-width: auto;
                 transform: rotateY(180deg);
             }
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .flip-card {
+        max-width: 70vw;
+        aspect-ratio: 2 / 3;
     }
 }

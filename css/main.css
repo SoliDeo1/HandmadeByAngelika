@@ -11,12 +11,27 @@
   padding: 0 20px;
 }
 
+/* Cleaned & unified SCSS for header + navigation (burger menu)
+   -----------------------------------------------------------
+   – mobile‑first, then overrides for ≥ 768 px
+   – one media‑query block
+   – consistent z‑index layering: header(1000) > menu(999) > content(1)
+*/
+/* helpers */
+/* ----- RESET ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ----- HEADER ----- */
 header {
-  top: 0;
-  left: 0;
   width: 100%;
-  font-family: "Roboto", sans-serif;
   margin-bottom: 35px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  /* keeps absolute nav inside */
 }
 header .nav-logo-name {
   display: flex;
@@ -26,30 +41,19 @@ header .nav-logo-name {
 header .header-text {
   font-size: 20px;
   font-style: italic;
-  -webkit-text-decoration: solid;
-          text-decoration: solid;
-  color: rgb(5, 5, 5);
-}
-header .burger {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  z-index: 100;
-}
-header .burger span {
-  width: 25px;
-  height: 3px;
-  background-color: black;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  color: #050505;
 }
 
+/* ----- NAVIGATION ----- */
 nav {
-  padding: 10px 10px;
+  padding: 10px;
+  position: relative;
+  /* base for absolute menu */
+  z-index: 1000;
+  /* logo */
+  /* burger button */
+  /* nav list (mobile default hidden) */
+  /* ----- DESKTOP ≥768px ----- */
 }
 nav .nav-container {
   display: flex;
@@ -57,48 +61,77 @@ nav .nav-container {
   align-items: center;
   position: relative;
 }
-nav ul {
-  display: flex;
-  list-style: none;
-}
-nav ul li a {
-  margin-right: 20px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  color: black;
-}
-@media (max-width: 768px) {
-  nav ul {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    flex-direction: column;
-    width: 100%;
-    display: none;
-    padding: 1rem 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  }
-  nav ul.open {
-    display: flex;
-  }
-  nav ul li {
-    text-align: center;
-    margin: 10px 0;
-  }
-  nav ul li a {
-    font-size: 18px;
-  }
-  nav .burger {
-    display: flex;
-  }
-}
 nav .nav-logo {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   margin-left: 25px;
+}
+nav .burger {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+  /* above menu */
+}
+nav .burger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+nav ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: none;
+}
+nav ul.open {
+  display: flex;
+}
+nav ul li {
+  text-align: center;
+}
+nav ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  margin: 0 20px;
+}
+@media (min-width: 768px) {
+  nav .burger {
+    display: none;
+  }
+  nav ul {
+    position: static;
+    display: flex;
+    /* always visible */
+    flex-direction: row;
+    background: transparent;
+    box-shadow: none;
+    gap: 0;
+    padding: 0;
+  }
+  nav ul li a {
+    font-size: 16px;
+    margin-right: 20px;
+  }
 }
 
 footer {
@@ -446,12 +479,6 @@ body.works .item-image img {
 .flip-card.flipped .flip-inner {
   transform: rotateY(180deg);
 }
-@media (max-width: 768px) {
-  .flip-card .flip-card {
-    max-width: 70vw;
-    aspect-ratio: 2/3;
-  }
-}
 .flip-card .flip-icon {
   position: absolute;
   bottom: 8px;
@@ -460,8 +487,6 @@ body.works .item-image img {
   color: rgba(255, 255, 255, 0.8);
   pointer-events: none;
   z-index: 2;
-  backface-visibility: hidden;
-  transform: none !important;
 }
 .flip-card .flip-inner {
   position: relative;
@@ -484,6 +509,12 @@ body.works .item-image img {
   transform: rotateY(180deg);
 }
 
+@media (max-width: 768px) {
+  .flip-card {
+    max-width: 70vw;
+    aspect-ratio: 2/3;
+  }
+}
 *,
 *::before,
 *::after {
