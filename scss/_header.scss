@@ -13,42 +13,101 @@ header {
         justify-content: center;
         align-items: center;
     }
+
     .header-text {
         font-size: 20px;
         font-style: italic;
         text-decoration: solid;
         color: rgb(5, 5, 5);
-        
-    }
-    nav {
-        padding: 10px 10px;
-        .nav-container {
-            display: $d-flex;
-            justify-content: $justify-space-between;
-            align-items: $align-center;
 
+    }
+
+    .burger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+
+        span {
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            border-radius: 2px;
+            transition: all 0.3s ease;
         }
+    }
+
+    
+}
+
+
+
+nav {
+    padding: 10px 10px;
+
+    .nav-container {
+        display: $d-flex;
+        justify-content: $justify-space-between;
+        align-items: $align-center;
+        position: relative;
+
+    }
+
+    ul {
+        display: $d-flex;
+        list-style: none;
+
+        li {
+            a {
+                margin-right: 20px;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 16px;
+                color: black;
+            }
+        }
+    }
+
+
+    @media (max-width: 768px) {
         ul {
-            display: $d-flex;
-            list-style: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background-color: white;
+            flex-direction: column;
+            width: 100%;
+            display: none;
+            padding: 1rem 0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+
+            &.open {
+                display: flex;
+            }
 
             li {
+                text-align: center;
+                margin: 10px 0;
+
                 a {
-                    margin-right: 20px;
-                    text-decoration: none;
-                    font-weight:500;
-                    font-size: 16px;
-                    color: black;
+                    font-size: 18px;
                 }
             }
         }
-        
-        .nav-logo {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            margin-left: 25px;
 
+        .burger {
+            display: flex;
         }
+    }
+    .nav-logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        margin-left: 25px;
+
     }
 }

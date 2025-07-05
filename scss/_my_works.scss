@@ -153,12 +153,14 @@ $card-max-width: auto;
 
     .flip-icon {
         position: absolute;
-        bottom: 5px;
-        right: 5px;
+        bottom: 8px;
+        right: 8px;
         font-size: 20px;
         color: rgba(255, 255, 255, 0.8);
         pointer-events: none;
-        /* чтобы клик проходил через иконку */
+        z-index: 2;
+        backface-visibility: hidden; // <--- ВАЖНО!
+        transform: none !important; 
     }
 
     .flip-inner {

@@ -30,26 +30,71 @@ header .header-text {
           text-decoration: solid;
   color: rgb(5, 5, 5);
 }
-header nav {
+header .burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+header .burger span {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+nav {
   padding: 10px 10px;
 }
-header nav .nav-container {
+nav .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
-header nav ul {
+nav ul {
   display: flex;
   list-style: none;
 }
-header nav ul li a {
+nav ul li a {
   margin-right: 20px;
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
   color: black;
 }
-header nav .nav-logo {
+@media (max-width: 768px) {
+  nav ul {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    padding: 1rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  nav ul.open {
+    display: flex;
+  }
+  nav ul li {
+    text-align: center;
+    margin: 10px 0;
+  }
+  nav ul li a {
+    font-size: 18px;
+  }
+  nav .burger {
+    display: flex;
+  }
+}
+nav .nav-logo {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -409,12 +454,14 @@ body.works .item-image img {
 }
 .flip-card .flip-icon {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 8px;
+  right: 8px;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.8);
   pointer-events: none;
-  /* чтобы клик проходил через иконку */
+  z-index: 2;
+  backface-visibility: hidden;
+  transform: none !important;
 }
 .flip-card .flip-inner {
   position: relative;
