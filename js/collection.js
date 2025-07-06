@@ -85,6 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector("#bags-carousel")) {
         new Glide("#bags-carousel", {
             type: "carousel",
+            touchRatio: 1,
             perView: 4,
             gap: 16,
             breakpoints: {
@@ -107,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function () {
         new Glide("#other-carousel", {
             type: "carousel",
             perView: 4,
+            touchRatio: 1,
             gap: 16,
             peek: 0,
             breakpoints: {

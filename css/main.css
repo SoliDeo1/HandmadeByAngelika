@@ -523,6 +523,15 @@ body.works .item-image img {
     max-width: 70vw;
     aspect-ratio: 2/3;
   }
+  .flip-inner {
+    padding-top: 40px;
+    max-width: 300px;
+    max-height: 400px;
+    margin: auto;
+  }
+  .flip-card {
+    max-height: 70%;
+  }
 }
 *,
 *::before,
@@ -653,7 +662,7 @@ h2 {
 }
 
 .glide__slide img {
-  width: 100%;
+  max-width: 100%;
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -677,6 +686,9 @@ h2 {
   top: 50%;
   width: 100%;
   pointer-events: none;
+  min-width: 44px;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
   /* чтобы клики были только по кнопкам */
 }
 
