@@ -374,9 +374,9 @@ body.works {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  z-index: 0;
+  z-index: 1000;
   color: #4B3B47;
-  background-color: #b5b5ae;
+  background-image: url("/images/62fd8a5f8805378a20791fef2465f323.jpg");
   padding: 0 20px;
   /* .item-wrapper:hover {
       transform: translateY(-5px);
@@ -384,13 +384,13 @@ body.works {
   } */
 }
 body.works .works-section {
-  background-color: #b5b5ae;
+  background-image: url("/images/62fd8a5f8805378a20791fef2465f323.jpg");
 }
 body.works .container-works {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  background-color: #b5b5ae;
+  background-image: url("/images/62fd8a5f8805378a20791fef2465f323.jpg");
 }
 @media (max-width: 480px) {
   body.works .container-works {
@@ -400,7 +400,7 @@ body.works .container-works {
 body.works h1#works {
   text-align: center;
   font-family: "Dancing Script", cursive;
-  color: #A05275;
+  color: #4B3B47;
   font-size: 2rem;
   text-align: center;
   margin-bottom: 2rem;
@@ -413,7 +413,7 @@ body.works .item-wrapper {
   justify-content: space-between;
   margin: auto;
   padding: 15px;
-  margin-bottom: 90px;
+  margin-bottom: 75px;
   box-shadow: 20px 15px 40px rgba(41, 41, 42, 0.25);
   background-color: white;
   border-radius: 20px;
