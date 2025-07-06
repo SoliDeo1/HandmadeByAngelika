@@ -1,37 +1,40 @@
 document.addEventListener("DOMContentLoaded", () => {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
-    const allImages = Array.from(document.querySelectorAll(".carousel img"));
+    const allImages = Array.from(
+        document.querySelectorAll("#bags-carousel img, #other-carousel img")
+    );
     let currentIndex = -1;
 
     // Открытие лайтбокса при клике
     allImages.forEach((img, index) => {
+        img.style.cursor = "pointer";
         img.addEventListener("click", () => {
             currentIndex = index;
-            openLightbox();
+            openLightbox(currentIndex);
         });
     });
 
-    function openLightbox() {
+    function openLightbox(index) {
+        currentIndex = index;
         lightboxImg.src = allImages[currentIndex].src;
-        lightbox.classList.remove("hidden"); // убрать hidden
-        lightbox.classList.add("active");    // добавить active
+        lightbox.classList.add("active");
     }
 
     function closeLightbox() {
-        lightbox.classList.remove("active");  // убрать active
-        lightbox.classList.add("hidden");     // добавить hidden
+        lightbox.classList.remove("active");
         lightboxImg.src = "";
-        currentIndex = -1;
     }
-    
+
     window.closeLightbox = closeLightbox;
+
     function navigateLightbox(direction) {
         if (currentIndex === -1) return;
         currentIndex =
             (currentIndex + direction + allImages.length) % allImages.length;
         lightboxImg.src = allImages[currentIndex].src;
     }
+
     window.navigateLightbox = navigateLightbox;
 
     // Кнопки навигации и закрытия
@@ -74,15 +77,49 @@ document.addEventListener("DOMContentLoaded", () => {
             navigateLightbox(deltaX > 0 ? 1 : -1);
         }
     });
-
 });
 
-// Прокрутка карусели (глобально, чтобы работало через inline onclick)
-function scrollCarousel(carouselId, direction) {
-    const carousel = document.getElementById(carouselId);
-    const scrollAmount = 300;
-    carousel.scrollBy({
-        left: direction * scrollAmount,
-        behavior: "smooth",
-    });
-}
+new Glide(".glide").mount();
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector("#bags-carousel")) {
+        new Glide("#bags-carousel", {
+            type: "carousel",
+            perView: 4,
+            gap: 16,
+            breakpoints: {
+                1024: {
+                    perView: 3,
+                },
+                768: {
+                    perView: 2,
+                },
+                480: {
+                    perView: 1,
+                },
+            },
+        }).mount();
+    }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector("#other-carousel")) {
+        new Glide("#other-carousel", {
+            type: "carousel",
+            perView: 4,
+            gap: 16,
+            peek: 0,
+            breakpoints: {
+                1024: {
+                    perView: 3,
+                },
+                768: {
+                    perView: 2,
+                },
+                480: {
+                    perView: 1,
+                },
+            },
+        }).mount();
+    }
+});

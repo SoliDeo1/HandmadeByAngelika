@@ -14,14 +14,14 @@ body.works {
     z-index: 0;
     // font-size: 1rem;
     color: #4B3B47;
-    background-color: #e1d8db;
+    background-color: white;
     ;
     padding: 0 20px;
 
 
 
     .works-section {
-        background-color: #e1d8db;
+        background-color: white;
     }
 
     .container-works {
@@ -29,7 +29,7 @@ body.works {
         flex-direction: column;
         // max-width: 1000px;
         margin: 0 auto;
-        background-color: #e1d8db;
+        background-color: white;
         // padding: 20px;
 
         @media(max-width: 480px) {
@@ -139,22 +139,25 @@ $card-max-width: auto;
     max-width: 220px;
     aspect-ratio: 2 / 3; // Заменяет фиксированную высоту
     margin: 0 auto;
+    cursor: pointer;
 
     &.flipped .flip-inner {
         transform: rotateY(180deg);
     }
 
-    
+
 
     .flip-icon {
+        backface-visibility: hidden;
+        transform: none !important; // без переворота
+        z-index: 2;
         position: absolute;
         bottom: 8px;
         right: 8px;
         font-size: 20px;
         color: rgba(255, 255, 255, 0.8);
         pointer-events: none;
-        z-index: 2;
-        
+
     }
 
     .flip-inner {

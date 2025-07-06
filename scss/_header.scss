@@ -111,6 +111,12 @@ nav {
                 color: #000;
                 text-decoration: none;
                 margin: 0 20px;
+
+                &:hover {
+                    background-color: #9a9599; // 💡 выбери свой цвет
+                    color: #2e282b; // 💡 тоже можно заменить
+                    border-radius: 6px;
+                }
             }
         }
     }
