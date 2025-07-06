@@ -520,7 +520,7 @@ body.works .item-image img {
 
 @media (max-width: 768px) {
   .flip-card {
-    max-width: 70vw;
+    max-width: 50vw;
     aspect-ratio: 2/3;
   }
   .flip-inner {
