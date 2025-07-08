@@ -83,7 +83,7 @@ nav .burger span {
 }
 nav ul {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   list-style: none;
   flex-direction: column;
   gap: 10px;
