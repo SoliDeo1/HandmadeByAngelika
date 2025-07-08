@@ -1,54 +1,48 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Инициализация Glide
-    const carousels = ["#bags-carousel", "#other-carousel"];
+    // Glide инициализация
     const glideOptions = {
         type: "carousel",
         perView: 4,
         gap: 16,
+        touchRatio: 1,
         breakpoints: {
             1024: { perView: 3 },
             768: { perView: 2 },
             480: { perView: 1 },
         },
     };
-    carousels.forEach((selector) => {
+
+    ["#bags-carousel", "#other-carousel"].forEach((selector) => {
         const el = document.querySelector(selector);
-        if (el) new Glide(selector, glideOptions).mount();
-    });
-
-    // 2. Настройка лайтбокса
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImg = document.getElementById("lightbox-img");
-
-    // 3. Берём только оригиналы
-    const allImages = Array.from(
-        document.querySelectorAll(
-            ".glide__slide:not(.glide__slide--clone) .lightbox-img"
-        )
-    );
-
-    // 4. Проставляем data-index
-    allImages.forEach((img, i) => {
-        img.dataset.index = i;
-    });
-
-    let currentIndex = -1;
-
-    // 5. Обработка клика
-    document.addEventListener("click", (e) => {
-        const img = e.target.closest(".lightbox-img");
-        if (!img) return;
-
-        // Найдём точный оригинал по src
-        const clickedSrc = img.src;
-        currentIndex = allImages.findIndex((image) => image.src === clickedSrc);
-
-        if (currentIndex !== -1) {
-            openLightbox(currentIndex);
+        if (el) {
+            new Glide(selector, glideOptions).mount();
         }
     });
 
+    // Оригинальные слайды (без клонов)
+    const slides = Array.from(
+        document.querySelectorAll(".glide__slide:not(.glide__slide--clone)")
+    );
+    const allImages = slides.map((slide) =>
+        slide.querySelector(".lightbox-img")
+    );
+
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    let currentIndex = -1;
+
+    // Назначаем клики только на оригинальные слайды
+    slides.forEach((slide, index) => {
+        slide.dataset.index = index;
+        slide.style.cursor = "pointer";
+        slide.addEventListener("click", () => {
+            currentIndex = index;
+            openLightbox(currentIndex);
+        });
+    });
+
     function openLightbox(index) {
+        if (!allImages[index]) return;
         lightboxImg.src = allImages[index].src;
         lightbox.classList.add("active");
     }
@@ -65,24 +59,11 @@ document.addEventListener("DOMContentLoaded", () => {
         lightboxImg.src = allImages[currentIndex].src;
     }
 
+    // Глобальные функции (для onclick в HTML)
     window.closeLightbox = closeLightbox;
     window.navigateLightbox = navigateLightbox;
 
-    // 6. Кнопки и клавиши
-    document
-        .querySelector(".lightbox-close")
-        ?.addEventListener("click", closeLightbox);
-    document
-        .querySelector(".lightbox-nav.left")
-        ?.addEventListener("click", () => navigateLightbox(-1));
-    document
-        .querySelector(".lightbox-nav.right")
-        ?.addEventListener("click", () => navigateLightbox(1));
-
-    lightbox.addEventListener("click", (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
-
+    // Клавиши
     document.addEventListener("keydown", (e) => {
         if (!lightbox.classList.contains("active")) return;
         if (e.key === "ArrowLeft") navigateLightbox(-1);
@@ -90,13 +71,20 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Escape") closeLightbox();
     });
 
-    // 7. Свайпы
+    // Свайп на мобильных
     let touchStartX = 0;
     lightbox.addEventListener("touchstart", (e) => {
         touchStartX = e.touches[0].clientX;
     });
     lightbox.addEventListener("touchend", (e) => {
         const deltaX = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(deltaX) > 50) navigateLightbox(deltaX > 0 ? 1 : -1);
+        if (Math.abs(deltaX) > 50) {
+            navigateLightbox(deltaX > 0 ? 1 : -1);
+        }
+    });
+
+    // Клик вне изображения — закрытие
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
     });
 });
