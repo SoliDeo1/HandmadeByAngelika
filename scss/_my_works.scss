@@ -11,18 +11,18 @@ body.works {
     min-height: 100vh;
     display: $d-flex;
     flex-direction: column;
-    z-index: 1000;
-    // font-size: 1rem;
-    
+    z-index: 0;
     color: #4B3B47;
-    // background-color: #b5b5ae;
-    background-image: url('/images/62fd8a5f8805378a20791fef2465f323.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fafafa;
     padding: 0 20px;
 
 
 
     .works-section {
-        background-image: url('/images/62fd8a5f8805378a20791fef2465f323.jpg');
+        background-color: #fafafa;
 
     }
 
@@ -31,7 +31,7 @@ body.works {
         flex-direction: column;
         // max-width: 1000px;
         margin: 0 auto;
-        background-image: url('/images/62fd8a5f8805378a20791fef2465f323.jpg');
+        background-color: #fafafa;
         // padding: 20px;
 
         @media(max-width: 480px) {
@@ -58,7 +58,12 @@ body.works {
         padding: 15px;
         margin-bottom: 75px;
         box-shadow: 20px 15px 40px rgba(41, 41, 42, 0.25);
-        background-color: white;
+        background-image: url('/images/1aa1f58d054a26afe52d7de12697102f.jpg');
+        background-size: cover;
+        /* Масштабирует изображение, чтобы покрыть всю область блока */
+        background-repeat: no-repeat;
+        /* Запрещает повторение изображения */
+        background-position: center;
         border-radius: 20px;
 
         @media (max-width: 768px) {
