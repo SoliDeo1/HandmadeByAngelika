@@ -23,7 +23,6 @@ header {
     margin-bottom: 35px;
     font-family: 'Roboto', sans-serif;
     position: relative;
-    /* keeps absolute nav inside */
 
     .nav-logo-name {
         display: $d-flex;
@@ -80,7 +79,7 @@ nav {
     /* nav list (mobile default hidden) */
     ul {
         display: $d-flex;
-        justify-content: end;
+        justify-content: flex-end;
         list-style: none;
         flex-direction: column;
         gap: 10px;
