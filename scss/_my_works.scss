@@ -4,37 +4,30 @@
     box-sizing: border-box;
 }
 
-
-
 body.works {
     position: relative;
     min-height: 100vh;
-    display: $d-flex;
+    display: flex;
     flex-direction: column;
     z-index: 0;
     color: #4B3B47;
+    background-color: #fafafa;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #fafafa;
     padding: 0 20px;
 
-
-
-    .works-section {
-        background-color: #fafafa;
-
+    .works-section,
+    .container-works {
+        background-color: inherit;
     }
 
     .container-works {
         display: flex;
         flex-direction: column;
-        // max-width: 1000px;
         margin: 0 auto;
-        background-color: #fafafa;
-        // padding: 20px;
 
-        @media(max-width: 480px) {
+        @media (max-width: 480px) {
             padding: 10px;
         }
     }
@@ -44,7 +37,6 @@ body.works {
         font-family: 'Dancing Script', cursive;
         color: #4B3B47;
         font-size: 2rem;
-        text-align: center;
         margin-bottom: 2rem;
     }
 
@@ -54,15 +46,14 @@ body.works {
         gap: 20px;
         max-width: 900px;
         justify-content: space-between;
+        align-items: center;
         margin: auto;
         padding: 15px;
         margin-bottom: 75px;
         box-shadow: 20px 15px 40px rgba(41, 41, 42, 0.25);
         background-image: url('/images/1aa1f58d054a26afe52d7de12697102f.jpg');
         background-size: cover;
-        /* Масштабирует изображение, чтобы покрыть всю область блока */
         background-repeat: no-repeat;
-        /* Запрещает повторение изображения */
         background-position: center;
         border-radius: 20px;
 
@@ -72,35 +63,32 @@ body.works {
         }
     }
 
-    /* .item-wrapper:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(74, 66, 70, 0.25);
-    } */
-
     .works-items-name {
         font-size: clamp(1.4rem, 2vw, 2rem);
         margin-bottom: 10px;
         font-family: 'Dancing Script', cursive;
-        font-size: 2rem;
     }
 
     .item-image img {
-        width: 100%;
-        height: 320px;
+        width: 180px;
+        height: auto;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        border-radius: 15px;
 
-        @media(min-width: 1024px) {
-            width: 250px;
-            height: 350px;
+        @media (max-width: 768px) {
+            width: 140px;
+        }
+
+        @media (max-width: 480px) {
+            width: 100px;
         }
     }
-
 }
 
 .flip-inner img {
-    padding: 35px 0 35px 35px;
+    padding: 0;
 }
-
-
 
 .text-container {
     padding: 20px;
@@ -113,76 +101,72 @@ body.works {
         font-size: 0.95rem;
     }
 
-
-    .text-container ul {
+    ul {
         font-family: 'Roboto', sans-serif;
         font-size: 1rem;
-        padding-left: 1.2rem;
-        line-height: 1.7;
-    }
-
-    ul {
+        padding: 10px 20px;
         list-style: none;
-        padding-left: 20px;
-        padding: 10px; // 🔸 Внутренние отступы
-        border-radius: 10px; // 🔘 Скругление углов
-        // box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); // ✨ Лёгкая тень
+        line-height: 1.7;
+        border-radius: 10px;
         margin-top: 10px;
+        margin-bottom: 25px;
 
         li {
             margin-bottom: 10px;
         }
     }
-
 }
 
-
+// Переменные
 $flip-duration: 0.6s;
-$card-width: 100%;
-$card-max-width: auto;
 
 .flip-card {
     width: 100%;
     max-width: 220px;
-    aspect-ratio: 2 / 3; // Заменяет фиксированную высоту
+    aspect-ratio: 2 / 3;
     margin: 0 auto;
     cursor: pointer;
+    overflow: hidden;
+
+    img {
+        border-radius: 20px;
+        overflow: hidden;
+    }
 
     &.flipped .flip-inner {
         transform: rotateY(180deg);
     }
 
-
-
     .flip-icon {
         backface-visibility: hidden;
-        transform: none !important; // без переворота
+        transform: none !important;
         z-index: 2;
         position: absolute;
-        bottom: 8px;
-        right: 8px;
+        bottom: 35px;
+        right: 5px;
         font-size: 20px;
         color: rgba(255, 255, 255, 0.8);
         pointer-events: none;
-
     }
 
     .flip-inner {
+        display: flex;
         position: relative;
+        align-items: center;
         width: 100%;
         height: 100%;
         transition: transform $flip-duration;
         transform-style: preserve-3d;
 
-
         img {
             position: absolute;
             width: 100%;
-            height: 100%;
+            height: 290px;
             object-fit: cover;
             backface-visibility: hidden;
-            border-radius: 10px;
+            border-radius: 20px;
             max-width: 100%;
+            
 
             &.back {
                 transform: rotateY(180deg);
@@ -194,6 +178,7 @@ $card-max-width: auto;
 @media (max-width: 768px) {
     .flip-card {
         max-width: 50vw;
+        max-height: 70%;
         aspect-ratio: 2 / 3;
     }
 
@@ -203,9 +188,4 @@ $card-max-width: auto;
         max-height: 400px;
         margin: auto;
     }
-
-    .flip-card {
-        max-height: 70%;
-    }
-
 }
