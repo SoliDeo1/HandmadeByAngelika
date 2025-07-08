@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+@import "@glidejs/glide/dist/css/glide.core.min.css";
 * {
   margin: 0;
   padding: 0;
@@ -293,7 +293,7 @@ body.home {
   font-family: "Dancing Script", sans-serif;
   color: #4B3B47;
   padding: 0 20px;
-  background-image: url("/images/backgrLika.webp");
+  background-image: url("../images/backgrLika.webp");
   background-size: cover;
 }
 body.home::before {
