@@ -39,11 +39,6 @@ header .nav-logo-name {
   justify-content: center;
   align-items: center;
 }
-header .header-text {
-  font-size: 20px;
-  font-style: italic;
-  color: #050505;
-}
 
 /* ----- NAVIGATION ----- */
 nav {
@@ -109,7 +104,7 @@ nav ul li {
   text-align: center;
 }
 nav ul li a {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   color: #000;
   text-decoration: none;
@@ -135,13 +130,13 @@ nav ul li a:hover {
     padding: 0;
   }
   nav ul li a {
-    font-size: 16px;
+    font-size: 20px;
     margin-right: 20px;
   }
 }
 
 footer {
-  padding-bottom: 15px;
+  padding-bottom: 35px;
 }
 footer .footer-container {
   max-width: 1050px;
@@ -283,13 +278,6 @@ body.contact-page {
   margin-top: 100px;
 }
 
-/* html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-} */
 *,
 *::before,
 *::after {
@@ -303,7 +291,6 @@ body.home {
   flex-direction: column;
   z-index: 0;
   font-family: "Dancing Script", sans-serif;
-  font-size: 1rem;
   color: #4B3B47;
   background-color: #fdf6f8;
   padding: 0 20px;
@@ -331,7 +318,7 @@ main {
 .info-block {
   display: flex;
   justify-content: flex-end;
-  margin-top: 80px;
+  margin-top: 100px;
 }
 
 .main-text-container {
@@ -343,9 +330,10 @@ main {
   box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
   /* тёплая тень */
   transition: all 0.3s ease;
+  background-color: rgba(212, 206, 210, 0.4);
 }
 .main-text-container .main-text-container:hover {
-  box-shadow: 0 10px 40px rgba(160, 82, 117, 0.3);
+  box-shadow: 0 10px 40px rgba(48, 25, 35, 0.3);
 }
 .main-text-container h1 {
   margin-bottom: 20px;
@@ -360,7 +348,7 @@ main {
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: black;
   text-align: center;
 }
@@ -639,7 +627,7 @@ h2 {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 5px white;
   display: block;
 }
 
@@ -704,7 +692,7 @@ h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0);
   border: none;
   color: white;
   font-size: 2rem;
@@ -716,12 +704,13 @@ h2 {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-  transition: background-color 0.3s;
+  transition: transform 0.3s ease, background-color 0.3s ease;
   z-index: 10;
 }
 
 .glide__arrow:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.8);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /* Левая стрелка */

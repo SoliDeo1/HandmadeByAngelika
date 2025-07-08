@@ -1,10 +1,4 @@
-/* html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-} */
+
 
 *,
 *::before,
@@ -20,7 +14,6 @@ body.home {
     flex-direction: column;
     z-index: 0;
     font-family: 'Dancing Script', sans-serif;
-    font-size: 1rem;
     color: #4B3B47;
     background-color: #fdf6f8;
     padding: 0 20px;
@@ -53,7 +46,7 @@ main {
 .info-block {
     display: $d-flex;
     justify-content: flex-end;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 
 
@@ -68,9 +61,12 @@ main {
     /* тёплая тень */
     // border: 2px solid #f3e1e8;
     transition: all 0.3s ease;
+    background-color: rgba(212, 206, 210, 0.4);
+    
+    
 
     .main-text-container:hover {
-        box-shadow: 0 10px 40px rgba(160, 82, 117, 0.3);
+        box-shadow: 0 10px 40px rgba(48, 25, 35, 0.3);
     }
 
     h1 {
@@ -87,7 +83,7 @@ main {
         text-align: center;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         color: black;
         text-align: center;
     }

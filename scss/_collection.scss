@@ -109,7 +109,7 @@ h2 {
     max-width: 90%;
     max-height: 90%;
     border-radius: 10px;
-    box-shadow: 0 0 20px white;
+    box-shadow: 0 0 5px white;
     display: block;
 }
 
@@ -173,7 +173,7 @@ h2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     border: none;
     color: white;
     font-size: 2rem;
@@ -183,12 +183,14 @@ h2 {
     /* включаем клики */
     border-radius: 50%;
     user-select: none;
-    transition: background-color 0.3s;
+    transition: transform 0.3s ease, background-color 0.3s ease;;
     z-index: 10;
 }
 
 .glide__arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    transform: translateY(-50%) scale(1.8);
+    background-color: rgba(0, 0, 0, 0);
+
 }
 
 /* Левая стрелка */
