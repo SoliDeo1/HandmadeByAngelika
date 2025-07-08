@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "@glidejs/glide/dist/css/glide.core.min.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -83,7 +83,7 @@ nav .burger span {
 }
 nav ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: end;
   list-style: none;
   flex-direction: column;
   gap: 10px;
@@ -292,9 +292,8 @@ body.home {
   z-index: 0;
   font-family: "Dancing Script", sans-serif;
   color: #4B3B47;
-  background-color: #fdf6f8;
   padding: 0 20px;
-  background-image: url("/IMG_5188.webp");
+  background-image: url("/images/backgrLika.webp");
   background-size: cover;
 }
 body.home::before {
@@ -330,7 +329,6 @@ main {
   box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
   /* тёплая тень */
   transition: all 0.3s ease;
-  background-color: rgba(212, 206, 210, 0.4);
 }
 .main-text-container .main-text-container:hover {
   box-shadow: 0 10px 40px rgba(48, 25, 35, 0.3);

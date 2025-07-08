@@ -15,10 +15,9 @@ body.home {
     z-index: 0;
     font-family: 'Dancing Script', sans-serif;
     color: #4B3B47;
-    background-color: #fdf6f8;
     padding: 0 20px;
-    background-image: url('/IMG_5188.webp');
-        background-size: cover;
+    background-image: url('/images/backgrLika.webp');
+    background-size: cover;
 
     &::before {
         content: "";
@@ -27,7 +26,7 @@ body.home {
         left: 0;
         width: 100%;
         height: 100%;
-        
+        // background-image: url('/images/backgrLika.webp');
         /* background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3)), url('/images/knitting-backgr.webp'); */
         // background-color: rgba(0, 0, 0, 0.3);
         // background-blend-mode: darken;
@@ -62,7 +61,8 @@ main {
     /* тёплая тень */
     // border: 2px solid #f3e1e8;
     transition: all 0.3s ease;
-    background-color: rgba(212, 206, 210, 0.4);
+    // background-color: rgba(212, 206, 210, 0.4);
+    // background-image: url(../images/backgrLika.webp);
     
     
 
