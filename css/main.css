@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "@glidejs/glide/dist/css/glide.core.min.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -108,11 +108,11 @@ nav ul li a {
   color: #000;
   text-decoration: none;
   margin: 0 20px;
-}
-nav ul li a:hover {
-  background-color: #9a9599;
-  color: #2e282b;
-  border-radius: 6px;
+  /* &:hover {
+      background-color: #9a9599; // 💡 выбери свой цвет
+      color: #a39c9f; // 💡 тоже можно заменить
+      border-radius: 6px;
+  } */
 }
 @media (min-width: 768px) {
   nav .burger {
@@ -351,6 +351,13 @@ main {
   text-align: center;
 }
 
+@font-face {
+  font-family: "GFS Didot";
+  src: url("/fonts/GFS_Didot/GFSDidot-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 *,
 *::before,
 *::after {
@@ -386,7 +393,7 @@ body.works .container-works {
 }
 body.works h1#works {
   text-align: center;
-  font-family: "Dancing Script", cursive;
+  font-family: "GFSDidot-Regular";
   color: #4B3B47;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -394,15 +401,13 @@ body.works h1#works {
 body.works .item-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  max-width: 900px;
+  gap: 50px;
+  max-width: 1000px;
   justify-content: space-between;
   align-items: center;
   margin: auto;
   padding: 15px;
   margin-bottom: 75px;
-  box-shadow: 20px 15px 40px rgba(41, 41, 42, 0.25);
-  background-image: url("../images/1aa1f58d054a26afe52d7de12697102f.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -417,7 +422,7 @@ body.works .item-wrapper {
 body.works .works-items-name {
   font-size: clamp(1.4rem, 2vw, 2rem);
   margin-bottom: 10px;
-  font-family: "Dancing Script", cursive;
+  font-family: "Arial";
 }
 body.works .item-image img {
   width: 180px;
@@ -447,6 +452,8 @@ body.works .item-image img {
   flex: 1;
   color: #4B3B47;
   min-width: 250px;
+  background-color: white;
+  max-width: 700px;
 }
 @media (max-width: 768px) {
   .text-container {
@@ -463,7 +470,6 @@ body.works .item-image img {
   border-radius: 10px;
   margin-top: 10px;
   margin-bottom: 25px;
-  text-align: center;
 }
 .text-container ul li {
   margin-bottom: 10px;
@@ -478,7 +484,7 @@ body.works .item-image img {
   overflow: hidden;
 }
 .flip-card img {
-  border-radius: 20px;
+  border-radius: 3px;
   overflow: hidden;
 }
 .flip-card.flipped .flip-inner {
@@ -489,11 +495,22 @@ body.works .item-image img {
   transform: none !important;
   z-index: 2;
   position: absolute;
-  bottom: 35px;
-  right: 5px;
+  bottom: 5px;
+  right: 10px;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.8);
   pointer-events: none;
+}
+.flip-card .flip-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: white;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.flip-card .flip-icon svg:hover {
+  opacity: 1;
 }
 .flip-card .flip-inner {
   display: flex;
@@ -507,11 +524,10 @@ body.works .item-image img {
 .flip-card .flip-inner img {
   position: absolute;
   width: 100%;
-  height: 290px;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   backface-visibility: hidden;
-  border-radius: 20px;
   max-width: 100%;
 }
 .flip-card .flip-inner img.back {
@@ -561,6 +577,7 @@ h2 {
   margin-bottom: 60px;
 }
 .category h2 {
+  font-family: "Roboto", sans-serif;
   margin-bottom: 25px;
 }
 
