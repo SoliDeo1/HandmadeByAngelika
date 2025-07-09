@@ -629,7 +629,7 @@ h2 {
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
-  box-shadow: 0 0 5px white;
+  box-shadow: 0 0 5px;
   display: block;
 }
 
@@ -664,7 +664,7 @@ h2 {
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 5px;
   display: block;
 }
 
