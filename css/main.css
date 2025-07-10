@@ -135,7 +135,7 @@ nav ul li a {
 }
 
 footer {
-  padding-bottom: 35px;
+  padding-bottom: 15px;
 }
 footer .footer-container {
   max-width: 1050px;
@@ -174,19 +174,31 @@ footer ul svg {
   filter: drop-shadow(0 0 2px white);
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+html,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body.contact-page {
-  font-family: "Dancing Script", sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
   background-color: #fafafa;
   color: #4B3B47;
-  padding: 0 20px;
-  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .contact-wrapper {
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -209,8 +221,9 @@ body.contact-page {
 .contact-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
   justify-content: center;
+  align-items: center;
+  min-height: 65vh;
 }
 
 .contact-form,
@@ -223,8 +236,30 @@ body.contact-page {
 }
 
 .contact-info {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.contact-item {
+  margin-bottom: 2rem;
+}
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.label {
+  font-family: "Arial", sans-serif;
+  color: #4B3B47;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .contact-info h2 {
@@ -233,8 +268,13 @@ body.contact-page {
 }
 
 .contact-info a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.1rem;
   color: #79404e;
   text-decoration: none;
+}
+.contact-info a:hover {
+  text-decoration: underline;
 }
 
 .social-names {
@@ -275,7 +315,12 @@ body.contact-page {
 }
 
 .contacts-footer {
-  margin-top: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-contacts {
+  flex: 1;
 }
 
 *,

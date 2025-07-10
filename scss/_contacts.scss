@@ -1,7 +1,15 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-  }
-  
+}
+
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 $font-main: 'Dancing Script', cursive;
 $color-bg: #fdf6f8;
@@ -11,15 +19,18 @@ $carousel-item-size: 250px;
 
 
 body.contact-page {
-    font-family: 'Dancing Script', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    // min-height: 100vh;
     background-color: #fafafa;
     color: $color-text;
-    padding: 0 20px;
-    // max-width: 1200px;
-    margin: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .contact-wrapper {
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -33,6 +44,7 @@ body.contact-page {
     margin-bottom: 2rem;
     font-size: 1.1rem;
 }
+
 .contact-paragr {
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -41,23 +53,50 @@ body.contact-page {
 .contact-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
+    align-items: center;
+    min-height: 65vh;
 }
 
 .contact-form,
 .contact-info {
     flex: 1 1;
-    background:  white;
+    background: white;
     padding: 2rem;
     border-radius: 1rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info {
-    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     max-width: 900px;
+    margin: 0 auto;
+    // padding: 3rem 2rem;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
 }
+
+.contact-item {
+    margin-bottom: 2rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.label {
+    font-family: 'Arial', sans-serif;
+    color: #4B3B47;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 
 .contact-info h2 {
     font-size: 1.5rem;
@@ -65,15 +104,21 @@ body.contact-page {
 }
 
 .contact-info a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
     color: #79404e;
     text-decoration: none;
-    
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
+
 .social-names {
     font-family: 'Arial', cursive;
     color: #4B3B47;
     font-size: 2rem;
-    
+
     a {
         font-family: 'Roboto', sans-serif;
         font-size: 1.1rem;
@@ -81,10 +126,11 @@ body.contact-page {
 }
 
 .contact-info p {
-    text-align: center; 
+    text-align: center;
     font-size: 26px;
-    
+
 }
+
 .contact-info a:hover {
     text-decoration: underline;
 }
@@ -108,5 +154,11 @@ body.contact-page {
 }
 
 .contacts-footer {
-    margin-top: 100px;
+    margin: 0;
+    padding: 0;
+}
+
+
+.main-contacts {
+    flex: 1;
 }
