@@ -209,7 +209,6 @@ body.contact-page {
 
 .contact-wrapper p {
   color: #6a4e57;
-  margin-bottom: 2rem;
   font-size: 1.1rem;
 }
 
@@ -218,14 +217,13 @@ body.contact-page {
   font-weight: bold;
 }
 
-.contact-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 65vh;
-}
-
+/* .contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 65vh;
+} */
 .contact-form,
 .contact-info {
   flex: 1 1;
@@ -240,7 +238,7 @@ body.contact-page {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 900px;
+  max-width: 700px;
   margin: 0 auto;
   background: white;
   border-radius: 1rem;
@@ -279,7 +277,7 @@ body.contact-page {
 
 .social-names {
   font-family: "Arial", cursive;
-  color: #4B3B47;
+  color: black;
   font-size: 2rem;
 }
 .social-names a {
@@ -611,6 +609,11 @@ body.collection {
   margin: auto;
 }
 
+.collection-h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 h2 {
   font-family: "Dancing Script", cursive;
   font-size: 2rem;
@@ -624,6 +627,7 @@ h2 {
 .category h2 {
   font-family: "Roboto", sans-serif;
   margin-bottom: 25px;
+  font-size: clamp(1.4rem, 2vw, 2rem);
 }
 
 .carousel-container {

@@ -41,7 +41,7 @@ body.contact-page {
 
 .contact-wrapper p {
     color: #6a4e57;
-    margin-bottom: 2rem;
+    
     font-size: 1.1rem;
 }
 
@@ -50,13 +50,13 @@ body.contact-page {
     font-weight: bold;
 }
 
-.contact-grid {
+/* .contact-grid {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     min-height: 65vh;
-}
+} */
 
 .contact-form,
 .contact-info {
@@ -73,7 +73,7 @@ body.contact-page {
     justify-content: center;
     align-items: center;
 
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
     // padding: 3rem 2rem;
     background: white;
@@ -116,7 +116,7 @@ body.contact-page {
 
 .social-names {
     font-family: 'Arial', cursive;
-    color: #4B3B47;
+    color: black;
     font-size: 2rem;
 
     a {

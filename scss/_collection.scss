@@ -22,7 +22,12 @@ body.collection {
     max-width: 1000px;
     margin: auto;
 }
+ 
 
+.collection-h1 {
+    text-align: center;
+    font-size: 2rem;
+}
 h2 {
     font-family: $font-main;
     font-size: 2rem;
@@ -35,6 +40,7 @@ h2 {
     h2 {
         font-family: 'Roboto', sans-serif;
         margin-bottom: 25px;
+        font-size: clamp(1.4rem, 2vw, 2rem);
     }
 }
 
