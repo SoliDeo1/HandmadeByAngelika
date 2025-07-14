@@ -192,7 +192,7 @@ body.contact-page {
   display: flex;
   flex-direction: column;
   background-color: #fafafa;
-  color: #4B3B47;
+  color: black;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -205,37 +205,32 @@ body.contact-page {
 .contact-wrapper {
   padding: 0 20px;
   text-align: center;
+  min-height: 70vh;
 }
 
 .contact-wrapper h1 {
+  font-family: "Arial";
   font-size: 2rem;
+  font-weight: 700;
   margin-bottom: 40px;
 }
 
 .contact-wrapper p {
-  color: #6a4e57;
+  color: black;
   font-size: 1.1rem;
 }
 
 .contact-paragr {
-  font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-family: "Arial";
+  font-weight: 700;
 }
 
-/* .contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 65vh;
-} */
 .contact-form,
 .contact-info {
   flex: 1 1;
   background: white;
   padding: 2rem;
   border-radius: 3px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info {
@@ -246,7 +241,6 @@ body.contact-page {
   max-width: 700px;
   margin: 0 auto;
   background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
 
@@ -258,8 +252,8 @@ body.contact-page {
 }
 
 .label {
-  font-family: "Arial", sans-serif;
-  color: #4B3B47;
+  font-family: "Arial";
+  color: black;
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
@@ -271,7 +265,7 @@ body.contact-page {
 
 .contact-info a {
   font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #050404;
   text-decoration: none;
 }
@@ -292,8 +286,8 @@ body.contact-page {
 .contact-info p {
   color: #050404;
   text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-family: "Arial";
+  font-size: clamp(1.4rem, 1.3vw, 2rem);
 }
 
 .contact-info a:hover {
@@ -319,8 +313,7 @@ body.contact-page {
 }
 
 .contacts-footer {
-  margin: 0;
-  padding: 0;
+  margin-top: 50px;
 }
 
 .main-contacts {
@@ -339,8 +332,6 @@ body.home {
   display: flex;
   flex-direction: column;
   z-index: 0;
-  font-family: "Dancing Script", sans-serif;
-  color: #4B3B47;
   padding: 0 20px;
   background-image: url("../images/backgrLika.webp");
   background-size: cover;
@@ -377,7 +368,6 @@ main {
   padding: 20px 20px 20px 60px;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
-  /* тёплая тень */
   transition: all 0.3s ease;
 }
 .main-text-container .main-text-container:hover {
@@ -420,7 +410,6 @@ body.works {
   display: flex;
   flex-direction: column;
   z-index: 0;
-  color: #4B3B47;
   background-color: #fafafa;
   background-size: cover;
   background-position: center;
@@ -444,7 +433,7 @@ body.works .container-works {
 body.works h1#works {
   text-align: center;
   font-family: "Arial";
-  color: #4B3B47;
+  color: black;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
@@ -499,7 +488,7 @@ body.works .item-image img {
 .text-container {
   padding: 20px;
   flex: 1;
-  color: #4B3B47;
+  color: black;
   min-width: 250px;
   background-color: white;
   max-width: 800px;
@@ -554,7 +543,7 @@ body.works .item-image img {
   width: 24px;
   height: 24px;
   fill: none;
-  stroke: white;
+  stroke: #000000;
   opacity: 0.8;
   transition: opacity 0.3s ease;
 }
@@ -604,7 +593,6 @@ body.works .item-image img {
 
 body.collection {
   background-color: #fafafa;
-  color: #4B3B47;
   padding: 0 20px;
   overflow-x: hidden;
 }
@@ -630,7 +618,7 @@ h2 {
   margin-bottom: 60px;
 }
 .category h2 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial";
   margin-bottom: 25px;
   font-size: clamp(1.4rem, 2vw, 2rem);
 }
@@ -753,14 +741,13 @@ h2 {
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 5px;
+  border-radius: 3px;
   display: block;
 }
 
 .glide {
-  max-width: 950px;
+  max-width: 1050px;
   margin: 0 auto;
-  overflow: hidden;
   position: relative;
 }
 
@@ -783,9 +770,11 @@ h2 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0);
+  background: none;
   border: none;
-  color: white;
+  outline: none;
+  box-shadow: none;
+  color: black;
   font-size: 2rem;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -799,51 +788,19 @@ h2 {
   z-index: 10;
 }
 
-.glide__arrow:hover {
-  transform: translateY(-50%) scale(1.8);
-  background-color: rgba(0, 0, 0, 0);
-}
+/* .glide__arrow:hover {
+    transform: translateY(-50%) scale(1.8);
+    background-color: rgba(0, 0, 0, 0);
 
+} */
 /* Левая стрелка */
 .glide__arrow--left {
-  left: 10px;
+  position: absolute;
+  left: -35px;
 }
 
 /* Правая стрелка */
 .glide__arrow--right {
-  right: 10px;
-}
-
-/* @media (max-width: 480px) {
-    .glide {
-        max-width: 100%;
-        overflow: visible;
-    }
-
-    .glide__track {
-        overflow: visible;
-    }
-
-    .glide__slides {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: visible;
-    }
-
-    .glide__slide {
-        flex: 0 0 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .glide__slide img {
-        width: auto;
-        max-width: 90vw;
-        // height: auto;
-        object-fit: contain;
-        border-radius: 10px;
-        display: block;
-    }
-} *//*# sourceMappingURL=main.css.map */
+  position: absolute;
+  right: -10px;
+}/*# sourceMappingURL=main.css.map */

@@ -4,15 +4,14 @@
     box-sizing: border-box;
 }
 
-$font-main: 'Dancing Script', cursive;
+
 $color-bg: #e1d8db;
-$color-text: #4B3B47;
+$color-text: black;
 $carousel-gap: 16px;
 $carousel-item-size: 250px;
 
 body.collection {
     background-color: #fafafa;
-    color: $color-text;
     padding: 0 20px;
     overflow-x: hidden;
 }
@@ -39,7 +38,7 @@ h2 {
     margin-bottom: 60px;
 
     h2 {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Arial';
         margin-bottom: 25px;
         font-size: clamp(1.4rem, 2vw, 2rem);
     }
@@ -165,16 +164,16 @@ h2 {
     max-width: 100%;
     height: 350px;
     object-fit: cover;
-    border-radius: 5px;
+    border-radius: 3px;
     display: block;
 
     
 }
 
 .glide {
-    max-width: 950px;
+    max-width: 1050px;
     margin: 0 auto;
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 }
 
@@ -200,9 +199,11 @@ h2 {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0);
+    background: none;
     border: none;
-    color: white;
+    outline: none;
+    box-shadow: none;
+    color: black;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -211,58 +212,26 @@ h2 {
     border-radius: 50%;
     user-select: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    ;
     z-index: 10;
 }
 
-.glide__arrow:hover {
+/* .glide__arrow:hover {
     transform: translateY(-50%) scale(1.8);
     background-color: rgba(0, 0, 0, 0);
 
-}
+} */
 
 /* Левая стрелка */
 .glide__arrow--left {
-    left: 10px;
+    position: absolute;
+    left: -35px;
 }
 
 /* Правая стрелка */
 .glide__arrow--right {
-    right: 10px;
+    position: absolute;
+    right: -10px;
 }
 
 
 
-/* @media (max-width: 480px) {
-    .glide {
-        max-width: 100%;
-        overflow: visible;
-    }
-
-    .glide__track {
-        overflow: visible;
-    }
-
-    .glide__slides {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: visible;
-    }
-
-    .glide__slide {
-        flex: 0 0 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .glide__slide img {
-        width: auto;
-        max-width: 90vw;
-        // height: auto;
-        object-fit: contain;
-        border-radius: 10px;
-        display: block;
-    }
-} */

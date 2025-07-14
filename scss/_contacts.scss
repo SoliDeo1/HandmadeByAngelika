@@ -11,9 +11,8 @@ body {
     padding: 0;
 }
 
-$font-main: 'Dancing Script', cursive;
 $color-bg: #fdf6f8;
-$color-text: #4B3B47;
+$color-text: black;
 $carousel-gap: 16px;
 $carousel-item-size: 250px;
 
@@ -37,30 +36,27 @@ body.contact-page {
 .contact-wrapper {
     padding: 0 20px;
     text-align: center;
+    min-height: 70vh;
 }
 
 .contact-wrapper h1 {
+    font-family: 'Arial';
     font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 40px;
 }
 
 .contact-wrapper p {
-    color: #6a4e57;
+    color: black;
     font-size: 1.1rem;
 }
 
 .contact-paragr {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Arial';
+    font-weight: 700;
 }
 
-/* .contact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    min-height: 65vh;
-} */
+
 
 .contact-form,
 .contact-info {
@@ -68,7 +64,6 @@ body.contact-page {
     background: white;
     padding: 2rem;
     border-radius: 3px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .contact-info {
@@ -79,10 +74,7 @@ body.contact-page {
 
     max-width: 700px;
     margin: 0 auto;
-    // padding: 3rem 2rem;
     background: white;
-    // border-radius: 1rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     text-align: center;
 }
 
@@ -95,8 +87,8 @@ body.contact-page {
 }
 
 .label {
-    font-family: 'Arial', sans-serif;
-    color: #4B3B47;
+    font-family: 'Arial';
+    color: black;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
@@ -109,7 +101,7 @@ body.contact-page {
 
 .contact-info a {
     font-family: 'Roboto', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #050404;
     text-decoration: none;
 
@@ -132,8 +124,8 @@ body.contact-page {
 .contact-info p {
     color: #050404;
     text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: clamp(1.4rem, 2vw, 2rem);
+    font-family: 'Arial';
+    font-size: clamp(1.4rem, 1.3vw, 2rem);
 
 }
 
@@ -160,8 +152,7 @@ body.contact-page {
 }
 
 .contacts-footer {
-    margin: 0;
-    padding: 0;
+    margin-top: 50px;
 }
 
 

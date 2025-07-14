@@ -13,8 +13,6 @@ body.home {
     display: $d-flex;
     flex-direction: column;
     z-index: 0;
-    font-family: 'Dancing Script', sans-serif;
-    color: #4B3B47;
     padding: 0 20px;
     background-image: url('../images/backgrLika.webp');
     background-size: cover;
@@ -59,11 +57,7 @@ main {
     padding: 20px 20px 20px 60px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
-    /* тёплая тень */
-    // border: 2px solid #f3e1e8;
     transition: all 0.3s ease;
-    // background-color: rgba(212, 206, 210, 0.4);
-    // background-image: url(../images/backgrLika.webp);
     
     
 
