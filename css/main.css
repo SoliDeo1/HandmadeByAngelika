@@ -796,11 +796,11 @@ h2 {
 /* Левая стрелка */
 .glide__arrow--left {
   position: absolute;
-  left: -35px;
+  left: -40px;
 }
 
 /* Правая стрелка */
 .glide__arrow--right {
   position: absolute;
-  right: -10px;
+  right: -40px;
 }/*# sourceMappingURL=main.css.map */
