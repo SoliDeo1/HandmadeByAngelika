@@ -738,6 +738,15 @@ h2 {
        object-fit: cover;
   }
 }
+@media (max-width: 768px) {
+  .glide__slide {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 
 .glide__slide img {
   max-width: 100%;
