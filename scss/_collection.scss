@@ -11,7 +11,6 @@ $carousel-gap: 16px;
 $carousel-item-size: 250px;
 
 body.collection {
-    font-family: Arial, sans-serif;
     background-color: #fafafa;
     color: $color-text;
     padding: 0 20px;
@@ -22,21 +21,23 @@ body.collection {
     max-width: 1000px;
     margin: auto;
 }
- 
+
 
 .collection-h1 {
+    font-family: 'Arial';
     text-align: center;
     font-size: 2rem;
 }
+
 h2 {
-    font-family: $font-main;
-    font-size: 2rem;
+    font-size: clamp(1.4rem, 2vw, 2rem);
     margin-top: 40px;
     text-align: center;
 }
 
 .category {
     margin-bottom: 60px;
+
     h2 {
         font-family: 'Roboto', sans-serif;
         margin-bottom: 25px;
@@ -143,12 +144,24 @@ h2 {
     right: 30px;
 }
 
+.glide__slide {
+    @media (max-width: 480px) {
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        object-fit: cover;
+        
+    }
+}
+
 .glide__slide img {
     max-width: 100%;
     height: 350px;
     object-fit: cover;
     border-radius: 5px;
     display: block;
+
+    
 }
 
 .glide {
@@ -160,6 +173,7 @@ h2 {
 
 .glide__slides {
     align-items: center;
+
 
 }
 
@@ -189,7 +203,8 @@ h2 {
     /* включаем клики */
     border-radius: 50%;
     user-select: none;
-    transition: transform 0.3s ease, background-color 0.3s ease;;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    ;
     z-index: 10;
 }
 
@@ -208,3 +223,39 @@ h2 {
 .glide__arrow--right {
     right: 10px;
 }
+
+
+
+/* @media (max-width: 480px) {
+    .glide {
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .glide__track {
+        overflow: visible;
+    }
+
+    .glide__slides {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .glide__slide {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .glide__slide img {
+        width: auto;
+        max-width: 90vw;
+        // height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+        display: block;
+    }
+} */

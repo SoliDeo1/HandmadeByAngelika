@@ -197,6 +197,11 @@ body.contact-page {
   overflow-y: auto;
 }
 
+.contact-grid {
+  max-width: 400px;
+  margin: auto;
+}
+
 .contact-wrapper {
   padding: 0 20px;
   text-align: center;
@@ -204,7 +209,7 @@ body.contact-page {
 
 .contact-wrapper h1 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 40px;
 }
 
 .contact-wrapper p {
@@ -229,7 +234,7 @@ body.contact-page {
   flex: 1 1;
   background: white;
   padding: 2rem;
-  border-radius: 1rem;
+  border-radius: 3px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -241,7 +246,6 @@ body.contact-page {
   max-width: 700px;
   margin: 0 auto;
   background: white;
-  border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
 }
@@ -268,7 +272,7 @@ body.contact-page {
 .contact-info a {
   font-family: "Roboto", sans-serif;
   font-size: 1.1rem;
-  color: #79404e;
+  color: #050404;
   text-decoration: none;
 }
 .contact-info a:hover {
@@ -282,12 +286,14 @@ body.contact-page {
 }
 .social-names a {
   font-family: "Roboto", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .contact-info p {
+  color: #050404;
   text-align: center;
-  font-size: 26px;
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
 }
 
 .contact-info a:hover {
@@ -437,7 +443,7 @@ body.works .container-works {
 }
 body.works h1#works {
   text-align: center;
-  font-family: "GFSDidot-Regular";
+  font-family: "Arial";
   color: #4B3B47;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -597,7 +603,6 @@ body.works .item-image img {
 }
 
 body.collection {
-  font-family: Arial, sans-serif;
   background-color: #fafafa;
   color: #4B3B47;
   padding: 0 20px;
@@ -610,13 +615,13 @@ body.collection {
 }
 
 .collection-h1 {
+  font-family: "Arial";
   text-align: center;
   font-size: 2rem;
 }
 
 h2 {
-  font-family: "Dancing Script", cursive;
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 2vw, 2rem);
   margin-top: 40px;
   text-align: center;
 }
@@ -724,6 +729,16 @@ h2 {
   right: 30px;
 }
 
+@media (max-width: 480px) {
+  .glide__slide {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
 .glide__slide img {
   max-width: 100%;
   height: 350px;
@@ -788,4 +803,38 @@ h2 {
 /* Правая стрелка */
 .glide__arrow--right {
   right: 10px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/* @media (max-width: 480px) {
+    .glide {
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .glide__track {
+        overflow: visible;
+    }
+
+    .glide__slides {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: visible;
+    }
+
+    .glide__slide {
+        flex: 0 0 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .glide__slide img {
+        width: auto;
+        max-width: 90vw;
+        // height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+        display: block;
+    }
+} *//*# sourceMappingURL=main.css.map */
