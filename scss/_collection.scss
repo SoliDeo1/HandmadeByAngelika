@@ -36,6 +36,8 @@ h2 {
 
 .category {
     margin-bottom: 60px;
+    max-width: 800px;
+    margin: auto;
 
     h2 {
         font-family: 'Arial';
@@ -252,5 +254,7 @@ h2 {
     }
 }
 
-
+.footer-collection {
+    margin-top: 20px;
+}
 

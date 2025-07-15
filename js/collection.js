@@ -2,9 +2,10 @@ document.addEventListener("DOMContentLoaded", () => {
     // Glide инициализация
     const glideOptions = {
         type: "carousel",
-        perView: 4,
+        perView: 3,
         gap: 16,
         touchRatio: 1,
+        keyboard: false,
         breakpoints: {
             1024: { perView: 3 },
             768: { perView: 2 },
@@ -12,7 +13,34 @@ document.addEventListener("DOMContentLoaded", () => {
         },
     };
 
-    ["#bags-carousel", "#other-carousel"].forEach((selector) => {
+    // Наведение мышки — чтобы знать, какая карусель в фокусе
+    document.querySelectorAll(".glide").forEach((carousel) => {
+        carousel.addEventListener("mouseenter", () => {
+            carousel.classList.add("glide-focus");
+        });
+        carousel.addEventListener("mouseleave", () => {
+            carousel.classList.remove("glide-focus");
+        });
+    });
+
+    // Обработка клавиш в рамках только активной карусели
+    document.addEventListener("keydown", (e) => {
+        const focusedCarousel = document.querySelector(".glide-focus");
+        if (!focusedCarousel) return;
+
+        const arrows = focusedCarousel.querySelector(
+            '[data-glide-el="controls"]'
+        );
+        if (!arrows) return;
+
+        if (e.key === "ArrowRight") {
+            arrows.querySelector('[data-glide-dir=">"]')?.click();
+        } else if (e.key === "ArrowLeft") {
+            arrows.querySelector('[data-glide-dir="<"]')?.click();
+        }
+    });
+
+    ["#bags-carousel", "#socks-carousel"].forEach((selector) => {
         const el = document.querySelector(selector);
         if (el) {
             new Glide(selector, glideOptions).mount();
