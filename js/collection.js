@@ -40,38 +40,55 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    ["#bags-carousel", "#socks-carousel"].forEach((selector) => {
-        const el = document.querySelector(selector);
-        if (el) {
-            new Glide(selector, glideOptions).mount();
+    ["#bags-carousel", "#socks-carousel", "#accessories-carousel"].forEach(
+        (selector) => {
+            const el = document.querySelector(selector);
+            if (el) {
+                new Glide(selector, glideOptions).mount();
+            }
         }
-    });
+    );
 
     // Оригинальные слайды (без клонов)
-    const slides = Array.from(
-        document.querySelectorAll(".glide__slide:not(.glide__slide--clone)")
-    );
-    const allImages = slides.map((slide) =>
-        slide.querySelector(".lightbox-img")
-    );
+    let currentImageList = [];
+    let currentIndex = -1;
+
+    document.querySelectorAll(".glide").forEach((carousel) => {
+        const slides = Array.from(
+            carousel.querySelectorAll(".glide__slide:not(.glide__slide--clone)")
+        );
+
+        const images = slides.map((slide) =>
+            slide.querySelector(".lightbox-img")
+        );
+
+        slides.forEach((slide, index) => {
+            slide.style.cursor = "pointer";
+            slide.addEventListener("click", () => {
+                currentImageList = images;
+                currentIndex = index;
+                openLightbox(currentIndex);
+            });
+        });
+    });
 
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
-    let currentIndex = -1;
+    
 
     // Назначаем клики только на оригинальные слайды
-    slides.forEach((slide, index) => {
+   /*  slides.forEach((slide, index) => {
         slide.dataset.index = index;
         slide.style.cursor = "pointer";
         slide.addEventListener("click", () => {
             currentIndex = index;
             openLightbox(currentIndex);
         });
-    });
+    }); */
 
     function openLightbox(index) {
-        if (!allImages[index]) return;
-        lightboxImg.src = allImages[index].src;
+        if (!currentImageList[index]) return;
+        lightboxImg.src = currentImageList[index].src;
         lightbox.classList.add("active");
     }
 
@@ -83,9 +100,10 @@ document.addEventListener("DOMContentLoaded", () => {
     function navigateLightbox(direction) {
         if (currentIndex === -1) return;
         currentIndex =
-            (currentIndex + direction + allImages.length) % allImages.length;
-        lightboxImg.src = allImages[currentIndex].src;
+            (currentIndex + direction + currentImageList.length) % currentImageList.length;
+        lightboxImg.src = currentImageList[currentIndex].src;
     }
+    
 
     // Глобальные функции (для onclick в HTML)
     window.closeLightbox = closeLightbox;
