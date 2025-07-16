@@ -11,7 +11,11 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="css/main.css">
+    </noscript>
+
     <title>My works</title>
 </head>
 
@@ -20,9 +24,9 @@
         <nav class="navigation">
             <div class="nav-container">
                 <div class="nav-logo-name">
-                    <a href="index.html">
-                    <img class="nav-logo" src="images/logo-img.png" alt="authors-logo">
-                </a>
+                    <a href="index.html" rel="noopener noreferrer">
+                        <img class="nav-logo" src="images/logo-img.png" alt="authors-logo">
+                    </a>
                 </div>
 
                 <button class="burger" aria-label="Toggle menu">
@@ -31,16 +35,16 @@
 
                 <ul>
                     <li>
-                        <a href="index.html">Main</a>
+                        <a href="index.html" rel="noopener noreferrer">Main</a>
                     </li>
                     <li>
-                        <a href="my_works.html">My works</a>
+                        <a href="my_works.html" rel="noopener noreferrer">My works</a>
                     </li>
                     <li>
-                        <a href="collection.html">Collection</a>
+                        <a href="collection.html" rel="noopener noreferrer">Collection</a>
                     </li>
                     <li>
-                        <a href="contacts.html">Contacts</a>
+                        <a href="contacts.html" rel="noopener noreferrer">Contacts</a>
                     </li>
                 </ul>
             </div>
@@ -81,7 +85,8 @@
                             <li>Handmade raffia summer bag
                                 bring effortless charm to your summer outfit.
                             </li>
-                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quisquam quos earum illum natus beatae sequi,</li>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quisquam quos earum illum
+                                natus beatae sequi,</li>
                             <!-- <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quod ullam deserunt optio odit deleniti recusandae repellendus velit! Earum necessitatibus aliquid commodi mollitia tempore corporis. Perspiciatis error voluptate similique ipsam?</li> -->
                             <!-- <li>Natural & elegant (minimal style)
                                 natural raffia tote
@@ -244,12 +249,12 @@
         <div class="footer-container">
             <ul class="social-list">
                 <li>
-                    <a href="https://www.facebook.com/share/1Yuz4vMEbc/?mibextid=wwXIfr" target="_blank">
+                    <a href="https://www.facebook.com/share/1Yuz4vMEbc/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
                         <img src="images/logos/fb_logo.svg" alt="Facebook logo" />
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/handmade_by_angelika?igsh=a3JhY3p2NTBldzQ1" target="_blank">
+                    <a href="https://www.instagram.com/handmade_by_angelika?igsh=a3JhY3p2NTBldzQ1" target="_blank" rel="noopener noreferrer">
                         <img src="images/logos/insta_logo.svg" alt="Instagram logo" />
                     </a>
                 </li>
