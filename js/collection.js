@@ -76,16 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const lightboxImg = document.getElementById("lightbox-img");
     
 
-    // Назначаем клики только на оригинальные слайды
-   /*  slides.forEach((slide, index) => {
-        slide.dataset.index = index;
-        slide.style.cursor = "pointer";
-        slide.addEventListener("click", () => {
-            currentIndex = index;
-            openLightbox(currentIndex);
-        });
-    }); */
-
     function openLightbox(index) {
         if (!currentImageList[index]) return;
         lightboxImg.src = currentImageList[index].src;

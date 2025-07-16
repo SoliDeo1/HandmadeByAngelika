@@ -712,11 +712,41 @@ h2 {
 }
 
 .lightbox-nav.left {
-  left: 30px;
+  left: 200px;
+}
+@media (max-width: 480px) {
+  .lightbox-nav.left {
+    left: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .lightbox-nav.left {
+    left: 10px;
+  }
+}
+@media (max-width: 834px) {
+  .lightbox-nav.left {
+    left: 20px;
+  }
 }
 
 .lightbox-nav.right {
-  right: 30px;
+  right: 200px;
+}
+@media (max-width: 480px) {
+  .lightbox-nav.right {
+    right: 6px;
+  }
+}
+@media (max-width: 768px) {
+  .lightbox-nav.right {
+    right: 10px;
+  }
+}
+@media (max-width: 834px) {
+  .lightbox-nav.right {
+    right: 20px;
+  }
 }
 
 @media (max-width: 480px) {

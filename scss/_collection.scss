@@ -138,11 +138,31 @@ h2 {
 }
 
 .lightbox-nav.left {
-    left: 30px;
+    left: 200px;
+
+    @media (max-width: 480px) {
+        left: 6px;
+    }
+    @media (max-width: 768px) {
+        left: 10px;
+    }
+    @media (max-width:834px) {
+        left: 20px;
+    }
 }
 
 .lightbox-nav.right {
-    right: 30px;
+    right: 200px;
+
+    @media (max-width: 480px) {
+        right: 6px;
+    }
+    @media (max-width: 768px) {
+        right: 10px;
+    }
+    @media (max-width:834px) {
+        right: 20px;
+    }
 }
 
 .glide__slide {
