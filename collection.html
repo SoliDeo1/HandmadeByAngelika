@@ -8,7 +8,7 @@
         content="Handmade by Angelika — уникальные изделия ручной работы, созданные с любовью и вниманием к деталям." />
     <meta name="keywords" content="handmade, изделия ручной работы, подарки, сувениры, творчество, Angelika" />
     <meta name="robots" content="index, follow" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/css/glide.theme.min.css">
@@ -17,9 +17,12 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preload" href="css/main.css" as="style" onload="this.onload=null;this.rel='stylesheet';">
+    <noscript>
+        <link rel="stylesheet" href="css/main.css">
+    </noscript>
     <title>Handmade Collection</title>
-</head> 
+</head>
 
 <body class="collection">
     <header>
@@ -186,9 +189,9 @@
 
 
     <!-- Glide JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js"></script>
-    <script src="js/collection.js"></script>
-    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.6.0/dist/glide.min.js" defer></script>
+    <script src="js/collection.js" defer></script>  
+    <script src="js/script.js" defer></script>
 </body>
 
 </html>
