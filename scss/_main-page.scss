@@ -14,11 +14,13 @@ body.home {
     flex-direction: column;
     z-index: 0;
     padding: 0 20px;
+    min-height: 100vh;
     background-image: url('../images/backgrLika.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
+
 
     &::before {
         content: "";
@@ -52,6 +54,7 @@ main {
 .main-text-container {
     max-width: 800px;
     width: 100%;
+    min-height: 200px;
     margin-top: 55px;
     box-sizing: border-box;
     padding: 20px 20px 20px 60px;
