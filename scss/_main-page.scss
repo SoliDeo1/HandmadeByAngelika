@@ -22,7 +22,7 @@ body.home {
     background-attachment: scroll;
 
 
-    &::before {
+   /*  &::before {
         content: "";
         position: fixed;
         top: 0;
@@ -34,7 +34,7 @@ body.home {
         background-size: cover;
         z-index: -1;
         opacity: 1;
-    }
+    } */
 }
 
 // ====== Основная часть (занимает всё свободное пространство) ======
