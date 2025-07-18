@@ -64,6 +64,8 @@ nav {
         border: none;
         cursor: pointer;
         z-index: 1001;
+        width: 70px;
+        height: 70px;
         /* above menu */
 
         span {
@@ -105,12 +107,6 @@ nav {
                 color: #000;
                 text-decoration: none;
                 margin: 0 20px;
-
-                /* &:hover {
-                    background-color: #9a9599; // 💡 выбери свой цвет
-                    color: #a39c9f; // 💡 тоже можно заменить
-                    border-radius: 6px;
-                } */
             }
         }
     }

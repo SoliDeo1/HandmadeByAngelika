@@ -70,6 +70,8 @@ nav .burger {
   border: none;
   cursor: pointer;
   z-index: 1001;
+  width: 70px;
+  height: 70px;
   /* above menu */
 }
 nav .burger span {
@@ -107,11 +109,6 @@ nav ul li a {
   color: #000;
   text-decoration: none;
   margin: 0 20px;
-  /* &:hover {
-      background-color: #9a9599; // 💡 выбери свой цвет
-      color: #a39c9f; // 💡 тоже можно заменить
-      border-radius: 6px;
-  } */
 }
 @media (min-width: 768px) {
   nav .burger {
@@ -327,6 +324,8 @@ body.contact-page {
 
 body.home {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: column;
   z-index: 0;
@@ -368,7 +367,6 @@ main {
   font-family: "Arial", sans-serif;
   font-size: clamp(1.2rem, 2.5vw, 2rem);
   color: #fff;
-  text-align: center;
 }
 .main-text-container p {
   text-align: center;
@@ -376,7 +374,6 @@ main {
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.4rem);
   color: black;
-  text-align: center;
 }
 
 @font-face {
