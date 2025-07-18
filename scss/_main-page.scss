@@ -1,5 +1,3 @@
-
-
 *,
 *::before,
 *::after {
@@ -14,29 +12,16 @@ body.home {
     flex-direction: column;
     z-index: 0;
     padding: 0 20px;
-    min-height: 100vh;
-    background-image: url('../images/backgrLika.webp');
     background-color: #fdf4f7;
+
+    // Фоновое изображение
+    background-image: url('../images/IMG_5188.webp');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: scroll;
-
-
-   /*  &::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        z-index: -1;
-        opacity: 1;
-    } */
 }
+
 
 // ====== Основная часть (занимает всё свободное пространство) ======
 main {
@@ -62,10 +47,10 @@ main {
     box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
     transition: all 0.3s ease;
     margin-bottom: 125px;
-    
-    
 
-   /*  &:hover {
+
+
+    /*  &:hover {
         box-shadow: 0 10px 40px rgba(48, 25, 35, 0.3);
     } */
 
@@ -89,4 +74,3 @@ main {
         text-align: center;
     }
 }
-
