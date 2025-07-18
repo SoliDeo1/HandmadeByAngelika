@@ -21,7 +21,7 @@ $align-center: center;
 header {
     width: 100%;
     margin-bottom: 35px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial';
     position: relative;
 
     .nav-logo-name {
@@ -46,7 +46,6 @@ nav {
         align-items: $align-center;
         position: relative;
     }
-
     /* logo */
     .nav-logo {
         width: 70px;

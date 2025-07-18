@@ -29,7 +29,7 @@
 header {
   width: 100%;
   margin-bottom: 35px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial";
   position: relative;
 }
 header .nav-logo-name {
@@ -326,12 +326,10 @@ body.contact-page {
 }
 
 body.home {
-  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   z-index: 0;
-  padding: 0 20px;
   background-color: #fdf4f7;
   background-image: url("../images/IMG_5188.webp");
   background-size: cover;
@@ -367,14 +365,14 @@ main {
 .main-text-container h1 {
   margin-bottom: 20px;
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: clamp(1.2rem, 2.5vw, 2rem);
   color: #fff;
   text-align: center;
 }
 .main-text-container p {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Arial", sans-serif;
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.4rem);
   color: black;
