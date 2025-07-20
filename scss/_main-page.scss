@@ -34,6 +34,11 @@ main {
     justify-content: flex-end;
     margin-top: 100px;
     padding-right: 25px;
+    
+    
+    @media (max-width: 480px) {
+        padding-left: 25px;
+    }
 }
 
 .main-text-container {
@@ -60,7 +65,7 @@ main {
     li {
         text-align: center;
         font-family: 'Arial', sans-serif;
-        font-weight: 600;
+        font-weight: 500;
         font-size: clamp(1rem, 2vw, 1.4rem);
         color: black;
         margin-bottom: 15px;
