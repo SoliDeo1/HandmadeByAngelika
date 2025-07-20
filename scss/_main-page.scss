@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 // ====== Фоновое изображение на всю страницу ======
 body.home {
     min-height: 100vh;
@@ -13,6 +18,8 @@ body.home {
     flex-direction: column;
     z-index: 0;
     background-color: #fdf4f7;
+    overflow-x: hidden;
+
 
     // Фоновое изображение
     background-image: url('../images/IMG_5188.webp');
@@ -34,6 +41,7 @@ main {
     justify-content: flex-end;
     margin-top: 100px;
     padding-right: 25px;
+    
     
     
     @media (max-width: 480px) {

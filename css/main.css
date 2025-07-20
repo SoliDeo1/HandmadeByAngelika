@@ -322,6 +322,11 @@ body.contact-page {
   box-sizing: border-box;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body.home {
   min-height: 100vh;
   margin: 0;
@@ -330,6 +335,7 @@ body.home {
   flex-direction: column;
   z-index: 0;
   background-color: #fdf4f7;
+  overflow-x: hidden;
   background-image: url("../images/IMG_5188.webp");
   background-size: cover;
   background-position: center center;
