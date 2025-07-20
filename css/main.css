@@ -345,6 +345,7 @@ main {
   display: flex;
   justify-content: flex-end;
   margin-top: 100px;
+  padding-right: 25px;
 }
 
 .main-text-container {
@@ -362,12 +363,16 @@ main {
   font-size: clamp(1.2rem, 2.5vw, 2rem);
   color: #fff;
 }
-.main-text-container p {
+.main-text-container ul {
+  list-style: none;
+}
+.main-text-container ul li {
   text-align: center;
   font-family: "Arial", sans-serif;
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.4rem);
   color: black;
+  margin-bottom: 15px;
 }
 
 @font-face {
