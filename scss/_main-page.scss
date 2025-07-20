@@ -36,30 +36,20 @@ main {
     margin-top: 100px;
 }
 
-
-
 .main-text-container {
     max-width: 800px;
     width: 100%;
-    // min-height: 200px;
     box-sizing: border-box;
-    // padding: 20px 20px 20px 60px;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
     transition: all 0.3s ease;
-    // margin-bottom: 125px;
 
 
-
-    /*  &:hover {
-        box-shadow: 0 10px 40px rgba(48, 25, 35, 0.3);
-    } */
 
     h1 {
         margin-bottom: 20px;
         text-align: center;
         font-family: 'Arial', sans-serif;
-        // font-size: 0.8rem;
         font-size: clamp(1.2rem, 2.5vw, 2rem);
         color: #fff;
 
