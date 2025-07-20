@@ -46,7 +46,7 @@ body.works {
         font-family: 'GFS_Didot';
         font-weight: 700;
         color: black;
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 2vw, 2.2rem);
         margin-bottom: 2rem;
     }
 
@@ -69,14 +69,12 @@ body.works {
         }
     }
 
-    
-
-
-    .works-items-name {
-        font-size: clamp(1.4rem, 2vw, 2rem);
-        margin-bottom: 10px;
-        font-family: 'Arial';
+    .text-container .works-items-name {
+        color: green;
     }
+
+
+    
 
     .item-image img {
         width: 180px;
@@ -106,6 +104,10 @@ body.works {
     min-width: 250px;
     background-color: white;
     max-width: 800px;
+
+    h2 {
+        margin-bottom: 10px;
+    }
 
     @media (max-width: 768px) {
         padding: 10px;

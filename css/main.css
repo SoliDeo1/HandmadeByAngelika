@@ -361,13 +361,21 @@ main {
   }
 }
 
+.main-page-description h3 {
+  padding-top: 15px;
+  margin-bottom: 15px;
+  font-family: "Arial";
+  text-align: center;
+}
+
 .main-text-container {
   max-width: 800px;
   width: 100%;
   box-sizing: border-box;
   border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
+  box-shadow: 0 10px 30px rgba(80, 72, 76, 0.2);
   transition: all 0.3s ease;
+  filter: brightness(0.8) contrast(0.9) saturate(1.4);
 }
 .main-text-container h1 {
   margin-bottom: 20px;
@@ -432,7 +440,7 @@ body.works h1#works {
   font-family: "GFS_Didot";
   font-weight: 700;
   color: black;
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
   margin-bottom: 2rem;
 }
 body.works .item-wrapper {
@@ -453,10 +461,8 @@ body.works .item-wrapper {
     align-items: center;
   }
 }
-body.works .works-items-name {
-  font-size: clamp(1.4rem, 2vw, 2rem);
-  margin-bottom: 10px;
-  font-family: "Arial";
+body.works .text-container .works-items-name {
+  color: red;
 }
 body.works .item-image img {
   width: 180px;
@@ -488,6 +494,9 @@ body.works .item-image img {
   min-width: 250px;
   background-color: white;
   max-width: 800px;
+}
+.text-container h2 {
+  margin-bottom: 10px;
 }
 @media (max-width: 768px) {
   .text-container {

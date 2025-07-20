@@ -49,14 +49,23 @@ main {
         padding-left: 25px;
     }
 }
+.main-page-description h3 {
+    padding-top: 15px;
+    margin-bottom: 15px;
+    font-family: 'Arial';
+    text-align: center;
+}
+
 
 .main-text-container {
     max-width: 800px;
     width: 100%;
     box-sizing: border-box;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(219, 179, 197, 0.2);
+    box-shadow: 0 10px 30px rgba(80, 72, 76, 0.2);
     transition: all 0.3s ease;
+    filter: brightness(0.8) contrast(0.9) saturate(1.4);
+
 
 
 
