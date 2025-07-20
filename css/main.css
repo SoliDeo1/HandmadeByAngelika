@@ -191,6 +191,7 @@ body.contact-page {
   color: black;
   overflow-x: hidden;
   overflow-y: auto;
+  padding: 0 20px;
 }
 
 .contact-grid {
@@ -325,12 +326,13 @@ body.contact-page {
 html, body {
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body.home {
   min-height: 100vh;
-  margin: 0;
-  padding: 0;
+  padding: 0 20px;
   display: flex;
   flex-direction: column;
   z-index: 0;
