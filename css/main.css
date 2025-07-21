@@ -780,7 +780,7 @@ body.works .item-image img {
 }
 
 .text-container h2 {
-  color: red;
+  font-weight: 500;
 }
 
 .flip-inner img {
