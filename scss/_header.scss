@@ -30,7 +30,7 @@ header {
         align-items: $align-center;
     }
 
-    
+
 }
 
 /* ----- NAVIGATION ----- */
@@ -46,6 +46,7 @@ nav {
         align-items: $align-center;
         position: relative;
     }
+
     /* logo */
     .nav-logo {
         width: 70px;
@@ -102,7 +103,7 @@ nav {
             text-align: center;
 
             a {
-                font-size:  20px;
+                font-size: 20px;
                 font-weight: 500;
                 color: #000;
                 text-decoration: none;
@@ -131,6 +132,105 @@ nav {
                 font-size: 20px;
                 margin-right: 20px;
             }
+        }
+    }
+}
+
+// Оверлей (полупрозрачный фон)
+.overlay {
+    position: fixed;
+    inset: 0; // top:0; right:0; bottom:0; left:0;
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998; // ниже меню (999)
+    pointer-events: none; // чтобы клики не блокировались, пока не активен
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto; // блокируем клики на фон
+}
+
+// МЕНЮ (мобильное)
+
+// убираем display:none, вместо него делаем начальное состояние скрытым через opacity и сдвиг
+nav ul {
+    display: $d-flex;
+    justify-content: flex-end;
+    list-style: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+
+    background-color: #e0e0e0; // мягкий светло-серый фон
+    border-radius: 12px; // скругление углов
+    padding: 1.5rem 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); // мягкая тень для объёма
+    z-index: 999;
+
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+
+    &.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    li {
+        margin: 0;
+        text-align: center;
+
+        a {
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: background-color 0.25s ease, color 0.25s ease;
+
+            /* &:hover,
+            &:focus {
+                background-color: #c0c0c0; // чуть темнее при наведении
+                color: #111;
+                outline: none;
+            } */
+        }
+    }
+}
+
+@media(min-width:768px) {
+    nav ul {
+        position: static;
+        flex-direction: row;
+        background: transparent;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+
+        li a {
+            font-size: 20px;
+            padding: 8px 15px;
+            border-radius: 4px;
+
+            /* &:hover,
+            &:focus {
+                background-color: #ddd;
+                color: #111;
+            } */
         }
     }
 }
